@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html>
+<title>Template 01</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+	* {
+		box-sizing: border-box;
+		margin:0;
+		padding:0;
+	}
+	body {
+		font-family: "Segoe UI",Arial,sans-serif
+	} 
+	a:hover {
+		box-shadow:0px 8px 22px #9E9E9E;
+	}
+	.btn-style {
+		color: #000;
+		background-color: #fff;
+		border: none;
+		padding:13px 25px;
+		text-decoration: none;
+		display: inline-block;
+		margin: 30px;
+		
+	}
+	.btn-left {
+		float: left;
+	}
+	.btn-right {
+		float: right;
+	}
+	.header-style {
+		font-size: 24px;
+	}
+	.content-div {
+		max-width:1500px;
+		margin:auto
+	}
+	 .row{
+		 clear:both;
+		 overflow:hidden;
+	 }
+	.half{
+		width:50%;
+		float:left;	
+	}
+
+	.half img {
+		max-width: 100%;
+		margin-bottom: -8px;
+		height:auto;
+	}
+	#about img{
+		display: block;
+		margin: auto;
+		padding-top: 40px;
+	}
+
+	.c-about{
+		text-align: center; 
+		padding-top: 40px;
+		padding-bottom: 40px;
+		color: #000;
+		background-color:#f1f1f1;
+	}
+	form {
+		margin:auto;
+		width:60%;
+		text-align:center
+	}
+	.form-p-one {
+		display: block;
+		font-size: 15px;
+		line-height: 1.5;
+		margin-bottom:10px;
+		margin-top:10px;
+	}
+	.form-p-two {
+		font-size: 18px;
+		color: #e91e63;
+	}
+	.c-form-input{
+		width:100%;
+		height: 40px;
+		margin-bottom: 15px;
+		border:1px solid #ccc;
+	}
+	.c-about-form-label{
+		margin:auto;
+		font-weight:bold;
+	}
+	.c-about-form-submit-btn {
+		background-color: #616161;
+		color:#fff;
+		height: 45px;
+	}
+	.c-about-form-submit-btn:hover{
+		box-shadow:0px 8px 22px #9E9E9E;
+	}
+	.c-about-form-link{
+		color:#000;
+	}
+</style>
+
+<body>
+
+<!-- !PAGE CONTENT! -->
+<div>
+
+  <!-- Header -->
+  <header class="header-style">
+    <a id = "myart" href="#" class= "btn-style btn-left" >MY ART</a>
+    <a href="#about" class= "btn-style btn-right" >About</a>
+  </header>
+  <!-- Photo Grid -->
+  <div class="row">
+    <div class="half">
+      <img src="w3images/streetart.jpg">
+      <img src="w3images/streetart2.jpg">
+      <img src="w3images/streetart5.jpg">
+    </div>
+
+    <div class="half">
+      <img src="w3images/streetart3.jpg">
+      <img src="w3images/streetart4.jpg">
+    </div>
+  </div>
+  </div>
+ <footer id="about" class="c-about">
+  <h2>About</h2>
+  <img src="w3images/boy.jpg" width="300" height="300">
+
+  
+  <form class ="form">
+    <p class="form-p-one">Just me, myself and I, exploring the universe of unknownment. I have a heart of love and an interest of lorem ipsum and mauris neque quam blog. I want to share my world with you. Praesent tincidunt sed tellus ut rutrum. Sed vitae justo condimentum, porta lectus vitae, ultricies congue gravida diam non fringilla. Praesent tincidunt sed tellus ut rutrum. Sed vitae justo condimentum, porta lectus vitae, ultricies congue gravida diam non fringilla.</p>
+    <p class="form-p-one form-p-two">Do not hesitate to contact me!</p>
+    <div>
+      <label class="c-about-form-label">Name</label>
+      <input class="c-form-input" type="text" required name="Name">
+    </div>
+    <div>
+      <label class="c-about-form-label">Email</label>
+      <input class="c-form-input" type="text" required name="Email">
+    </div>
+    <div >
+      <label class="c-about-form-label">Message</label>
+      <input class="c-form-input" required name="Message">
+    </div>
+    <button class="c-form-input c-about-form-submit-btn" type="submit" >Send</button>
+	<br>
+  <p>Powered by <a class="c-about-form-link" href="http://www.w3schools.com/w3css/default.asp">Meenakshi</a></p>
+  </form>
+    </footer>
+  
+  
+</body>
+</html>
