@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Bootstrap Example</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  <style>
+    *{
+	  box-sizing: border-box;
+	  margin:0;
+	  padding:0;
+		}
+    body {
+	  background-color: #F0F0F0;
+	}
+	.c-content-out-style{
+	  background-color: #ffffff;	  
+	}
+	.c-profile-image{
+		width: 100%;
+		height: auto;
+	}
+	.c-profile{
+	    padding-right:0px;
+		padding-left:0px;
+	}
+    .c-person-info{
+	    margin:20px;
+	}
+	.glyphicon{
+	    color: #009688;
+		font-size: 15px;
+	}
+	.c-person-info p{
+	    color: #A9A9A9;
+	}
+	.c-person-info span{
+	    margin-right: 10px;
+	}
+	.c-profile{
+	    background-color: #ffffff;
+	    margin-top:10px;
+		/*margin-left:5px;*/
+		/*margin-right:5px;*/
+		margin-bottom: 5px;
+	    box-shadow: 0px 0px 15px #888888;
+	}
+	.c-info-heading{
+	    font-size:20px;
+	}
+	.c-progress-size{
+		border-radius:50px;
+		height:15px;
+		line-height:15px;
+	}
+	.c-progress-border{
+		border-radius:50px;
+	}
+	.c-progress-color{
+	    background-color: #009688;
+	}
+	.c-heading{
+	   font-size: 28px;
+	   vertical-align: top;
+	   padding-left:15px;
+	   color:#888888;
+	}
+	.c-big-icon{
+	   font-size: 37px;
+	}
+	.c-sub-heading{
+	   font-size: 20px;
+	   font-weight: bolder;
+	   color:#888888;
+	}
+	.c-sub-block-duration{
+	   color: #009688;
+	   margin-left: 2px;	   
+	}
+	.c-work-experience{
+	   padding:20px;
+	   margin-left:0px !important;
+	}
+	.c-sub-content{
+	   color:black;
+	}
+	footer{
+	    padding-top: 15px;
+		padding-bottom: 10px;
+		background:#009688;
+		text-align: center;
+		color: #ffffff;
+	}
+  </style>
+</head>
+<body>
+    <div class="container-fluid">
+			<div class="col-sm-4" id="c-intro">
+			    <div class="c-profile">
+					 <div>
+						<img class="c-profile-image c-image-dimensions" src="avatar_hat.jpg">
+					 </div>
+					 <div class="c-person-info">
+						<p><span class="glyphicon glyphicon-briefcase"></span> Designer</p>
+						<p><span class="glyphicon glyphicon-home"></span> London,UK</p>
+						<p><span class="glyphicon glyphicon-envelope"></span> ex@mail.com</p>
+						<p><span class="glyphicon glyphicon-earphone"></span> 1234567890</p>	
+						<p><hr><p>	
+						<p class="c-info-heading"><span class="glyphicon glyphicon-asterisk"></span>Skills</p>	
+						<div>
+							<p>Adobe Photoshop</p>
+							<div class="progress c-progress-size">
+								<div class="progress-bar c-progress-size c-progress-color" role="progressbar" 
+									 aria-valuenow="90" aria-valuemin="0" aria-valuemax="100" style="width:90%">
+								  90%
+								</div>
+							</div>
+						</div>
+						<div>
+							<p>Photography</p>
+							<div class="progress c-progress-size">
+								<div class="progress-bar c-progress-size c-progress-color" role="progressbar" 
+									 aria-valuenow="80" aria-valuemin="0" aria-valuemax="100" style="width:80%">
+								  80%
+								</div>
+							</div>
+						</div>
+						<div>
+							<p>Illustrator</p>
+							<div class="progress c-progress-size">
+								<div class="progress-bar c-progress-size c-progress-color" role="progressbar" 
+									 aria-valuenow="75" aria-valuemin="0" aria-valuemax="100" style="width:75%">
+								  75%
+								</div>
+							</div>
+						</div>
+						<div>
+							<p>Media</p>
+							<div class="progress c-progress-size">
+								<div class="progress-bar c-progress-size c-progress-color" role="progressbar" 
+									 aria-valuenow="50" aria-valuemin="0" aria-valuemax="100" style="width:50%">
+								  50%
+								</div>
+							</div>
+						</div>
+						<p class="c-info-heading"><span class="glyphicon glyphicon-globe"></span>Languages</p>	
+						<div>
+							<p>English</p>
+							<div class="progress c-progress-border">
+								<div class="progress-bar c-progress-border c-progress-color" role="progressbar" 
+									 aria-valuenow="100" aria-valuemin="0" aria-valuemax="100" style="width:100%">
+								</div>
+							</div>
+						</div>
+						<div>
+							<p>German</p>
+							<div class="progress c-progress-border">
+								<div class="progress-bar c-progress-border c-progress-color" role="progressbar" 
+									 aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width:60%">
+								</div>
+							</div>
+						</div>
+						<div>
+							<p>Spanish</p>
+							<div class="progress c-progress-border">
+								<div class="progress-bar c-progress-border c-progress-color" role="progressbar" 
+									 aria-valuenow="30" aria-valuemin="0" aria-valuemax="100" style="width:30%">
+								</div>
+							</div>
+						</div> 		
+                        <div class="row">
+							
+						</div> 								
+					 </div>	
+                </div>				 
+			</div>
+			<div class="col-sm-8">
+			    <div class="c-profile c-work-experience">
+					<div>
+						<span class="glyphicon glyphicon-briefcase c-big-icon"></span>
+						<span class="c-heading"> Work Experience</span>
+					</div>
+					<div class="c-sub-content-block">
+						<h3 class="c-sub-heading">Front End Developer / w3schools.com</h3>
+						<h5 class="c-sub-block-duration">
+							<span class="glyphicon glyphicon-calendar"></span>  Mar 2012 - Current
+						</h5>
+						<p class="c-sub-content">Lorem ipsum dolor sit amet. Praesentium magnam consectetur vel in deserunt aspernatur est reprehenderit sunt hic. 
+							   Nulla tempora soluta ea et odio, unde doloremque repellendus iure, iste.</p>
+						<p><hr></p>	   
+					</div>
+					<div class="c-sub-content-block">
+						<h3 class="c-sub-heading">Web Developer / something.com</h3>
+						<h5 class="c-sub-block-duration">
+							<span class="glyphicon glyphicon-calendar"></span>  Mar 2012 - Dec 2014
+						</h5>
+						<p class="c-sub-content">Consectetur adipisicing elit. Praesentium magnam consectetur vel 
+						in deserunt aspernatur est reprehenderit sunt hic. Nulla tempora soluta ea et odio, unde doloremque repellendus iure, iste.
+						</p>
+						<p><hr></p>	   
+					</div>
+					<div class="c-sub-content-block">
+						<h3 class="c-sub-heading">Graphic Designer / designsomething.com</h3>
+						<h5 class="c-sub-block-duration">
+							<span class="glyphicon glyphicon-calendar"></span> Jun 2010 - Mar 2012
+						</h5>
+						<p class="c-sub-content">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>					
+					</div>
+				</div>		
+			</div>
+			<div class="col-sm-8">
+			    <div class="c-profile c-work-experience">
+					<div>
+						<span class="glyphicon glyphicon-asterisk c-big-icon"></span>
+						<span class="c-heading"> Education</span>
+					</div>
+					<div class="c-sub-content-block">
+						<h3 class="c-sub-heading">w3schools.com</h3>
+						<h5 class="c-sub-block-duration">
+							<span class="glyphicon glyphicon-calendar"></span>Foreever
+						</h5>
+						<p class="c-sub-content">Lorem ipsum dolor sit amet. Praesentium magnam </p>
+						<p><hr></p>	   
+					</div>
+					<div class="c-sub-content-block">
+						<h3 class="c-sub-heading">London Business School</h3>
+						<h5 class="c-sub-block-duration">
+							<span class="glyphicon glyphicon-calendar"></span>  2013 - 2015
+						</h5>
+						<p class="c-sub-content">Consectetur adipisicing elit.</p>
+						<p><hr></p>	   
+					</div>
+					<div class="c-sub-content-block">
+						<h3 class="c-sub-heading">School of Coding</h3>
+						<h5 class="c-sub-block-duration">
+							<span class="glyphicon glyphicon-calendar"></span> 2010 - 2012
+						</h5>
+						<p class="c-sub-content">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>					
+					</div>	
+				</div>	
+			</div>
+	</div>
+	<footer class="container-fluid">
+	    <div class="row">
+		   <p>Find me on social Media<p>
+		</div>
+		<div class="row">
+			<img src="fb_hover.png"></img>
+			<img src="fb_hover.png"></img>
+			<img src="fb_hover.png"></img>
+		</div>
+		<div class="row">
+		   <p>Powered by bootstrap.css<p>
+		</div>
+	</footer>
+</body>
+</html>
