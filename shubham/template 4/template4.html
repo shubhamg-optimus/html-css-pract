@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  
+    <style>
+	/* CSS used here will be applied after bootstrap.css */
+	.navbar-fixed-left {
+	  width: 75px !important;
+	  position: fixed;
+	  border-radius: 0;
+	  height: 100%;
+	}
+	.c-navbar-side{
+	  background-color :#2C3E50;
+	  color:#2C3E50;
+	}
+    .navbar-brand{
+	  height: 20%
+	}
+	.navbar-fixed-left .navbar-nav > li {
+	  float: none; 
+	  width: 75px!important;
+	}
+
+	.navbar-fixed-left + .container {
+	  padding-left: 160px;
+	}
+	.container {
+	  height: 1000px;
+	}
+
+	.wrapper {
+	  margin-left: 140px;
+	}
+	.fa {
+	  font-size: 35px;
+	  color: #ffffff;
+	}
+	.c-menu-item{
+	  background-color:#34495E;
+	  margin-bottom: 2px;
+	}
+	.c-menu-link:hover{
+	  background-color:#2980B9 !important; 
+	}
+	
+  </style>
+</head>
+<body>
+<!--navigation-->
+	<div class="navbar c-navbar-side navbar-fixed-left">
+		      <a class="navbar-brand" href="#">
+			    <img src="http://www.psps.com/wp/wp-content/themes/psps/img/header/logo-new.png" class="img-responsive">
+			  </a>
+			  <ul class="nav navbar-nav">
+				   <li class="c-menu-item"><a class="c-menu-link" href="#home"><i class="fa fa-tachometer"></i></a></li>
+				   <li class="c-menu-item"><a class="c-menu-link"`href="#info"><i class="fa fa-th"></i></a></li>
+				   <li class="c-menu-item"><a class="c-menu-link" href="#work"><i class="fa fa-list"></i></a></li>
+				   <li class="c-menu-item"><a class="c-menu-link" href="#contact"><i class="fa fa-map"></i></a></li>
+			  </ul>
+	</div>
+	<!--end navigation-->
+	<!-- 1st section-->
+	<div class="wrapper">
+		<div class="container" id="home">
+		 <div class="row">
+		   <h2>Link 1</h2>
+		 </div>
+		</div>
+		<!-- 2nd section-->
+		<div class="container" id="info">
+			<div class="row">
+			   <h2>Link 2</h2>
+			</div>
+		</div>
+		<!--3rd section-->
+		<div class="container" id="love">
+			 <div class="row">
+			   <h2>Link 3</h2>
+			 </div>
+		</div>
+		<!--4th section-->
+		<div class="container" id="work">
+			 <div class="row">
+			   <h2>Link 4</h2>
+			 </div>
+		</div>
+		<!--5th section-->
+		<div class="container" id="contact">
+			 <div class="row">
+			   <h2>Link 5</h2>
+			 </div>
+		</div>
+	</div>
+</body>
+</html>
