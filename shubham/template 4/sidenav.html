@@ -1,0 +1,536 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  
+    <style>
+	/* CSS used here will be applied after bootstrap.css */
+	*{
+	  margin: 0 ;
+	  padding: 0;
+	}
+	.navbar-fixed-left {
+	  width: 80px !important;
+	  position: fixed;
+	  border-radius: 0;
+	  height: 100%;
+	}
+	.c-navbar-side{
+	  background-color :#2C3E50;
+	  color:#2C3E50;
+	}
+    .navbar-brand{
+	  height: 20%
+	}
+	.c-menu-item {
+	  float: none;
+	  width: 79px!important;
+	  background-color:#34495E;
+	  margin-bottom: 1px;
+	  height: 68px;
+	}
+	.c-menu-item-small{
+	  height: 32px;
+	}
+	.wrapper {
+	  margin-left: 80px;
+	}
+	.c-navbar-custom{
+	  margin-top: 107px;
+	}
+	.c-nav-bottom{
+		margin-top: 0px;
+		position: absolute;
+		bottom: 0;
+	}
+	.c-navbar-custom > li > a:hover{
+	  background-color:#2980B9; 
+	}
+	.c-nav-item-img{
+	    height: auto;
+        margin: auto;
+	}
+	.c-nav-item-text{
+	   color: #ffffff;
+	   font-size: 10px;
+       padding-top: 5px;
+	   display: block;
+	}
+	.c-navbar-custom>li>a{
+	    padding: 0px!important;
+	}
+	.c-nav-content{
+	    text-align: center;
+		padding-top: 16px;
+        height: 68px;
+	}
+	.c-nav-content-small{
+	    padding-top: 5px;
+        height: 32px;
+	}
+	.c-navbar-logo{
+	    text-align: center;
+	}
+	.navbar-brand {
+		height: 107px;
+		width: 80px;
+	}
+	.c-top-nav-custom{
+	   background-color: #ffffff;
+	   line-height: 50px;
+	}
+	.c-margin-left{
+	   margin-left:10px;
+	}
+	.c-padding-top{
+	   padding-top: 15px;
+	}
+	.c-margin-right{
+	   margin-right : 30px;
+	}
+	.c-column-heading{
+	   display: inline;
+	   margin-left:10px;
+	   border-bottom: 2px solid #BDC3C7;
+	   padding-bottom:10px;
+	}
+	.c-column-header{
+	   border-bottom: 1px solid #BDC3C7;
+	   padding: 10px;
+	   padding-bottom:10px;
+	}
+	.c-column-padding{
+	  padding-right:10px;
+	  padding-top: 5px;
+	}
+	.c-refresh-image{
+	    width: 22px;
+		margin-right: 20px;
+	}
+	.c-filter-image{
+	    width: 22px;
+	}
+	.c-orderinfo{
+	  margin : 7px;
+	  background: #ffffff;
+	  border: solid 1px #BDC3C7;
+	}
+	.c-orderinfo-header,
+	.c-orderinfo-content,
+    .c-orderinfo-footer	
+	{
+	  padding: 15px;
+	  margin-right: 0px;
+      margin-left: 0px;
+	  border-bottom: solid 1px #BDC3C7;
+	}
+	.c-orderinfo-header,
+    .c-orderinfo-footer	
+	{
+	  padding: 10px 15px;
+	}
+	.c-orderinfo-footer{
+	  border-bottom: 0px;	 
+	  margin-top: -15px;
+	}
+	.c-small-font-heavy{
+	  font-size: 10px;
+	  font-weight: 600;
+	}
+	.c-vertical-separator{
+	  border-right: solid 1px #B7B7B7;
+	  padding-right:4px;
+	  margin-top: 10px;
+	}
+	.c-separator-padding{
+	  margin-left: 4px;
+	  margin-top: 10px;
+	}
+	.c-orderinfo-subcontent{
+	    color: #c4c4c4;
+		font-size: 10px;
+	}
+	.c-orderinfo-maincontent{
+	    font-weight: 600;
+	}
+    .c-column-content{
+	   height: 540px;
+	   overflow-y: auto;
+	}
+    #timeline{
+		top: 0;
+		bottom: 0;
+		position: absolute;
+		content: " ";
+		width: 2px;
+		background-color: #BDC3C7;
+		left: 7%;
+		/* margin-left: -1.5px; */
+		margin-top: 40px;
+		height:100%;
+		z-index: -1;
+	}
+	.progress {
+		height: 10px;
+		border-radius: 10px;
+		margin: 0px 0px;
+	}
+	.progress-bar{
+	    background-color: #1ABC9C;
+	}
+	.progress-bar-negative{
+	    background-color: #E74C3C;
+	}
+	.c-filter-div{
+	    position: absolute;
+		padding : 0px 30px;
+	}
+	#pick-list-filter{
+	    margin-top: 10px;  
+	}
+	.form-group{
+	  margin-bottom:0px;
+	}
+	.form-group>label{
+	    font-size:9px;
+	}
+	form{
+	  background-color: #ffffff;
+	  padding: 0px 15px;
+	  border: 1px solid #BDC3C7;
+	}
+	.btn{
+	  margin-top:10px;
+	  margin-bottom:10px;
+	  width: 45%;
+	}
+	.c-filter-button{
+	  padding: 0px 15px;
+	}
+	</style>
+</head>
+<body style="background-color:#ECF0F1;overflow: auto;">
+<!--navigation-->
+		<nav class="navbar c-navbar-side navbar-fixed-left">
+		   <div class="c-navbar-logo">
+			   <a class="navbar-brand" href="#">
+					<img class="c-nav-item-img" src="desktop_slicing\ps-logo.png"> 
+			   </a>
+		   </div>
+		   <ul class="nav c-navbar-custom">
+			   <li class="c-menu-item">
+					<a href="#home">
+						<div class="c-nav-content">
+							<img class="c-nav-item-img" src="desktop_slicing\dashboard.png">
+							<span class="c-nav-item-text" >Dashboard</span>
+						</div>									
+					</a>
+			   </li>
+			   <li class="c-menu-item">
+					<a href="#home">
+						<div class="c-nav-content">
+							<img class="c-nav-item-img" src="desktop_slicing\orders-icon.png">
+							<span class="c-nav-item-text">Orders</span>
+						</div>
+					</a>
+			   </li>
+			   <li class="c-menu-item">
+					<a href="#home">
+						<div class="c-nav-content">
+							<img class="c-nav-item-img" src="desktop_slicing\list-icon.png">
+							<span class="c-nav-item-text">Pick Lists</span>
+						</div>
+					</a>
+			   </li>
+			   <li class="c-menu-item">
+					<a class="c-menu-link" href="#home">
+						<div class="c-nav-content">
+							<img class="c-nav-item-img" src="desktop_slicing\staging-map.png">
+							<span class="c-nav-item-text">Staging Map</span>
+						</div>
+					</a>
+			   </li>
+			</ul>
+			<ul class="nav c-navbar-custom c-nav-bottom">
+				<li class="c-menu-item">
+					<a class="c-menu-link" href="#home">
+						<div class="c-nav-content">
+							<img class="c-nav-item-img" src="desktop_slicing\user-icon.png">
+							<span class="c-nav-item-text">John Smith</span>
+						</div>
+					</a>
+			   </li>
+			   <li class="c-menu-item c-menu-item-small">
+					<a class="c-menu-link" href="#home">
+						<div class="c-nav-content c-nav-content-small">
+							<span class="c-nav-item-text">Logout</span>
+						</div>
+					</a>
+			   </li>
+			</ul>
+		</nav>		
+		<!--end navigation-->
+		<!-- 1st section-->
+		<div class="wrapper">
+		    <div class="c-top-nav-custom">
+			  <div class="container-fluid">
+			     <div class="row">
+					 <span class="glyphicon glyphicon-home c-margin-left"></span>
+					 <span class="c-margin-left"> / </span>
+					 <span class="c-margin-left"> Dashboard </span>
+					 <span class="fa fa-bell-o pull-right c-margin-right c-padding-top"></span>
+					 <span class="glyphicon glyphicon-search pull-right c-margin-right c-padding-top"></span>
+				 </div>
+			  </div>
+		    </div>
+			<div class="container col-md-4">
+				 <div class="row c-column-header">
+					   <h5 class="c-column-heading">Pick Lists</h5>
+					   	<a data-toggle="collapse" data-target="#pick-list-filter">
+							<img class="c-nav-item-img pull-right c-column-padding c-filter-image" src="desktop_slicing\sortby-icon.png">
+                        </a>
+						<img class="c-nav-item-img pull-right c-column-padding c-refresh-image " src="desktop_slicing\reload.png">
+					  	<div id="pick-list-filter" class="collapse col-md-12 c-filter-div">
+							<form>
+								<div class="form-group">
+								  <label for="name">NAME:</label>
+								  <input type="text" class="form-control" id="name">
+								</div>
+								<div class="form-group">
+								  <label for="search">SEARCH:</label>
+								  <input type="text" class="form-control" id="search">
+								</div>
+								<div class="form-group">
+								  <label for="type">TYPE:</label>
+								  <select class="form-control" id="type">
+									<option>Pick Lists</option>
+								  </select>
+								</div>
+								<div class="form-group">
+								  <label for="sort">SORT:</label>
+								  <select class="form-control" id="sort">
+									<option>Target Date</option>
+								  </select>
+								</div>
+								<div class="form-group">
+								  <label for="creator">CREATOR:</label>
+								  <select class="form-control" id="creator">
+									<option>Myself</option>
+								  </select>
+								</div>
+								<div class="form-group">
+								  <label for="unit">Unit:</label>
+								  <select class="form-control" id="unit">
+									<option>main</option>
+								  </select>
+								</div>
+								<div class="form-group">
+								  <label for="department">DEPARTMENT:</label>
+								  <select class="form-control" id="department">
+									<option>Expendables</option>
+								  </select>
+								</div>
+								<div class="form-group">
+								  <label for="shortage">SHORTAGE:</label>
+								  <select class="form-control" id="shortage">
+									<option>HasShortages</option>
+								  </select>
+								</div>
+								<div class="row c-filter-button">
+									<button type="submit" class="btn btn-default pull-left">Remove</button>
+									<button type="submit" class="btn btn-default pull-right btn-primary">Save</button>
+								</div>
+						    </form>
+						</div>
+			     </div>
+				 <div class="c-column-content">
+						<div id="timeline"></div>
+						<div class="c-orderinfo">
+							<div class="row c-orderinfo-header">
+							   <span class="pull-left c-small-font-heavy">V174113-001</span>
+							   <span class="pull-right c-small-font-heavy">Cables</span>
+							</div>
+							<div class="c-orderinfo-content">
+							   <h5 class="c-orderinfo-maincontent"> DC: Legends of Tomorrow</h5>
+							   <h6 class="c-orderinfo-subcontent"> MAIN CABLE PACKAGE</h6>
+							</div>
+							<div class="c-orderinfo-footer">
+							    <div class="progress">
+								  	  <div class="progress-bar" role="progressbar" aria-valuenow="70" aria-valuemin="0" aria-valuemax="100" style="width:70%">
+										<span class="sr-only">70% Complete</span>
+									  </div>
+								</div>								
+								<img class="c-nav-item-img" src="desktop_slicing\star.png">
+								<span class="pull-right c-small-font-heavy c-separator-padding">Morning</span>
+								<span class="pull-right c-small-font-heavy c-vertical-separator">October 7</span>
+							</div>		
+						</div>
+						<div class="c-orderinfo">
+							<div class="row c-orderinfo-header">
+							   <span class="pull-left c-small-font-heavy">V174113-001</span>
+							   <span class="pull-right c-small-font-heavy">Cables</span>
+							</div>
+							<div class="c-orderinfo-content">
+							   <h5 class="c-orderinfo-maincontent"> DC: Legends of Tomorrow</h5>
+							   <h6 class="c-orderinfo-subcontent"> MAIN CABLE PACKAGE</h6>
+							</div>
+							<div class="c-orderinfo-footer">
+							    <div class="progress">
+								  	  <div class="progress-bar" role="progressbar" aria-valuenow="70" aria-valuemin="0" aria-valuemax="100" style="width:70%">
+										<span class="sr-only">70% Complete</span>
+									  </div>
+								</div>								
+								<img class="c-nav-item-img" src="desktop_slicing\star.png">
+								<span class="pull-right c-small-font-heavy c-separator-padding">Morning</span>
+								<span class="pull-right c-small-font-heavy c-vertical-separator">October 7</span>
+							</div>		
+						</div>	
+						<div class="c-orderinfo">
+							<div class="row c-orderinfo-header">
+							   <span class="pull-left c-small-font-heavy">V174113-001</span>
+							   <span class="pull-right c-small-font-heavy">Cables</span>
+							</div>
+							<div class="c-orderinfo-content">
+							   <h5 class="c-orderinfo-maincontent"> DC: Legends of Tomorrow</h5>
+							   <h6 class="c-orderinfo-subcontent"> MAIN CABLE PACKAGE</h6>
+							</div>
+							<div class="c-orderinfo-footer">
+							    <div class="progress">
+								  	  <div class="progress-bar" role="progressbar" aria-valuenow="70" aria-valuemin="0" aria-valuemax="100" style="width:70%">
+										<span class="sr-only">70% Complete</span>
+									  </div>
+								</div>								
+								<img class="c-nav-item-img" src="desktop_slicing\star.png">
+								<span class="pull-right c-small-font-heavy c-separator-padding">Morning</span>
+								<span class="pull-right c-small-font-heavy c-vertical-separator">October 7</span>
+							</div>		
+						</div>	
+						<div class="c-orderinfo">
+							<div class="row c-orderinfo-header">
+							   <span class="pull-left c-small-font-heavy">V174113-001</span>
+							   <span class="pull-right c-small-font-heavy">Cables</span>
+							</div>
+							<div class="c-orderinfo-content">
+							   <h5 class="c-orderinfo-maincontent"> DC: Legends of Tomorrow</h5>
+							   <h6 class="c-orderinfo-subcontent"> MAIN CABLE PACKAGE</h6>
+							</div>
+							<div class="c-orderinfo-footer">
+							    <div class="progress">
+								  	  <div class="progress-bar" role="progressbar" aria-valuenow="70" aria-valuemin="0" aria-valuemax="100" style="width:70%">
+										<span class="sr-only">70% Complete</span>
+									  </div>
+								</div>								
+								<img class="c-nav-item-img" src="desktop_slicing\star.png">
+								<span class="pull-right c-small-font-heavy c-separator-padding">Morning</span>
+								<span class="pull-right c-small-font-heavy c-vertical-separator">October 7</span>
+							</div>		
+						</div>
+						<div class="c-orderinfo">
+							<div class="row c-orderinfo-header">
+							   <span class="pull-left c-small-font-heavy">V174113-001</span>
+							   <span class="pull-right c-small-font-heavy">Cables</span>
+							</div>
+							<div class="c-orderinfo-content">
+							   <h5 class="c-orderinfo-maincontent"> DC: Legends of Tomorrow</h5>
+							   <h6 class="c-orderinfo-subcontent"> MAIN CABLE PACKAGE</h6>
+							</div>
+							<div class="c-orderinfo-footer">
+							    <div class="progress">
+								  	  <div class="progress-bar" role="progressbar" aria-valuenow="70" aria-valuemin="0" aria-valuemax="100" style="width:70%">
+										<span class="sr-only">70% Complete</span>
+									  </div>
+								</div>								
+								<img class="c-nav-item-img" src="desktop_slicing\star.png">
+								<span class="pull-right c-small-font-heavy c-separator-padding">Morning</span>
+								<span class="pull-right c-small-font-heavy c-vertical-separator">October 7</span>
+							</div>		
+						</div>	
+					</div>
+			</div>
+			<div class="container col-md-4">
+				 <div class="row c-column-header">
+					   <h5 class="c-column-heading">Orders</h5>
+					   <img class="c-nav-item-img pull-right c-column-padding c-filter-image" src="desktop_slicing\sortby-icon.png">
+					   <img class="c-nav-item-img pull-right c-column-padding c-refresh-image " src="desktop_slicing\reload.png">
+				 </div>
+				 <div class="c-column-content">
+						<div id="timeline"></div>
+						<div class="c-orderinfo">
+							<div class="row c-orderinfo-header">
+							   <span class="pull-left c-small-font-heavy">V174113-001</span>
+							   <span class="pull-right c-small-font-heavy">Cables</span>
+							</div>
+							<div class="c-orderinfo-content">
+							   <h5 class="c-orderinfo-maincontent"> DC: Legends of Tomorrow</h5>
+							   <h6 class="c-orderinfo-subcontent"> MAIN CABLE PACKAGE</h6>
+							</div>
+							<div class="c-orderinfo-footer">
+							    <div class="progress">
+								  	  <div class="progress-bar" role="progressbar" aria-valuenow="70" aria-valuemin="0" aria-valuemax="100" style="width:70%">
+										<span class="sr-only">70% Complete</span>
+									  </div>
+								</div>								
+								<img class="c-nav-item-img" src="desktop_slicing\star.png">
+								<span class="pull-right c-small-font-heavy c-separator-padding">Morning</span>
+								<span class="pull-right c-small-font-heavy c-vertical-separator">October 7</span>
+							</div>		
+						</div>
+						<div class="c-orderinfo">
+							<div class="row c-orderinfo-header">
+							   <span class="pull-left c-small-font-heavy">V174113-001</span>
+							   <span class="pull-right c-small-font-heavy">Cables</span>
+							</div>
+							<div class="c-orderinfo-content">
+							   <h5 class="c-orderinfo-maincontent"> DC: Legends of Tomorrow</h5>
+							   <h6 class="c-orderinfo-subcontent"> MAIN CABLE PACKAGE</h6>
+							</div>
+							<div class="c-orderinfo-footer">
+							    <div class="progress">
+								  	  <div class="progress-bar progress-bar-negative" role="progressbar" aria-valuenow="70" aria-valuemin="0" aria-valuemax="100" style="width:70%">
+										<span class="sr-only">70% Complete</span>
+									  </div>
+								</div>								
+								<img class="c-nav-item-img" src="desktop_slicing\star.png">
+								<span class="pull-right c-small-font-heavy c-separator-padding">Morning</span>
+								<span class="pull-right c-small-font-heavy c-vertical-separator">October 7</span>
+							</div>		
+						</div>	
+				 </div>
+			</div>
+			<div class="container col-md-4">
+				 <div class="row c-column-header">
+					   <h5 class="c-column-heading">Bookmarks</h5>
+					   <img class="c-nav-item-img pull-right c-column-padding c-filter-image" src="desktop_slicing\sortby-icon.png">
+					   <img class="c-nav-item-img pull-right c-column-padding c-refresh-image " src="desktop_slicing\reload.png">
+				 </div>
+				 <div class="c-column-content">
+						<div id="timeline"></div>
+						<div class="c-orderinfo">
+							<div class="row c-orderinfo-header">
+							   <span class="pull-left c-small-font-heavy">V174113-001</span>
+							   <span class="pull-right c-small-font-heavy">Cables</span>
+							</div>
+							<div class="c-orderinfo-content">
+							   <h5 class="c-orderinfo-maincontent"> DC: Legends of Tomorrow</h5>
+							   <h6 class="c-orderinfo-subcontent"> MAIN CABLE PACKAGE</h6>
+							</div>
+							<div class="c-orderinfo-footer">
+							    <div class="progress">
+								  	  <div class="progress-bar" role="progressbar" aria-valuenow="70" aria-valuemin="0" aria-valuemax="100" style="width:70%">
+										<span class="sr-only">70% Complete</span>
+									  </div>
+								</div>								
+								<img class="c-nav-item-img" src="desktop_slicing\star.png">
+								<span class="pull-right c-small-font-heavy c-separator-padding">Morning</span>
+								<span class="pull-right c-small-font-heavy c-vertical-separator">October 7</span>
+							</div>		
+						</div>
+				</div>
+			</div>			
+</body>
+</html>
