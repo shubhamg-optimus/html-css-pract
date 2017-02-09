@@ -1,0 +1,1052 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	<script	src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+	<script	src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+	<link rel="stylesheet" href="index.css">
+	<link rel="stylesheet" href="orders.css">
+</head>
+<body style="background-color:#ECF0F1;overflow: auto;">
+<!--navigation-->
+		<nav class="navbar c-navbar-side navbar-fixed-left">
+		   <div class="c-navbar-logo">
+			   <a class="navbar-brand" href="#">
+					<img class="c-nav-item-img" src="desktop_slicing\ps-logo.png"> 
+			   </a>
+		   </div>
+		   <ul class="nav c-navbar-custom">
+			   <li class="c-menu-item">
+					<a href="index.html">
+						<div class="c-nav-content">
+							<img class="c-nav-item-img" src="desktop_slicing\dashboard.png">
+							<span class="c-nav-item-text" >Dashboard</span>
+						</div>									
+					</a>
+			   </li>
+			   <li class="c-menu-item">
+					<a href="orders.html">
+						<div class="c-nav-content">
+							<img class="c-nav-item-img" src="desktop_slicing\orders-icon.png">
+							<span class="c-nav-item-text">Orders</span>
+						</div>
+					</a>
+			   </li>
+			   <li class="c-menu-item">
+					<a href="pick_lists.html">
+						<div class="c-nav-content">
+							<img class="c-nav-item-img" src="desktop_slicing\list-icon.png">
+							<span class="c-nav-item-text">Pick Lists</span>
+						</div>
+					</a>
+			   </li>
+			   <li class="c-menu-item">
+					<a class="c-menu-link" href="#home">
+						<div class="c-nav-content">
+							<img class="c-nav-item-img" src="desktop_slicing\staging-map.png">
+							<span class="c-nav-item-text">Staging Map</span>
+						</div>
+					</a>
+			   </li>
+			</ul>
+			<ul class="nav c-navbar-custom c-nav-bottom">
+				<li class="c-menu-item">
+					<a class="c-menu-link" href="user_profile.html">
+						<div class="c-nav-content">
+							<img class="c-nav-item-img" src="desktop_slicing\user-icon.png">
+							<span class="c-nav-item-text">John Smith</span>
+						</div>
+					</a>
+			   </li>
+			   <li class="c-menu-item c-menu-item-small">
+					<a class="c-menu-link" href="#home">
+						<div class="c-nav-content c-nav-content-small">
+							<span class="c-nav-item-text">Logout</span>
+						</div>
+					</a>
+			   </li>
+			</ul>
+		</nav>		
+		<!--end navigation-->
+		<!-- 1st section-->
+		<div class="wrapper">
+		    <div class="c-top-nav-custom">
+			  <div class="container-fluid">
+			     <div class="row">
+					 <span class="glyphicon glyphicon-home c-margin-left"></span>
+					 <span class="c-margin-left"> / </span>
+					 <span class="c-margin-left"> Orders </span>
+					 <span class="fa fa-bell-o pull-right c-margin-right c-padding-top"></span>
+					 <span class="glyphicon glyphicon-search pull-right c-margin-right c-padding-top"></span>
+				 </div>
+			  </div>
+		    </div>
+            <div class="container c-orders-container" id="accordion">
+				<div class="c-orderdetails-header">
+				<img src="desktop_slicing\reload.png">
+				<img src="desktop_slicing\sortby-icon.png" class="pull-right c-control-icon">
+				<i class="fa fa-search pull-right c-search-glypicon"></i>
+				</div>
+					<div class="panel custom-panel">
+						<div class="c-order-div-style">
+							Hidden Fortress <a data-toggle="collapse" data-parent="#accordion"
+								href="#collapse1"> <span class="caret custom-caret pull-right"></span>
+							</a> <span class="pull-right c-ordercount-style"> 8 </span>
+						</div>
+						<div id="collapse1" class="collapse in c-caret-rotate">
+							<div class="table-responsive">
+								<table class="table table-bordered c-orderstable">
+									<thead>
+										<tr>
+											<th class="col-md-2">ID</th>
+											<th class="col-md-2">Target Date</th>
+											<th class="col-md-2">Target Time</th>
+											<th class="col-md-4">Description</th>
+											<th class="col-md-2">Unpicked</th>
+
+										</tr>
+									</thead>
+									<tbody>
+										<tr>
+											<td>V203984</td>
+											<td>Yesterday</td>
+											<td>End Of Day</td>
+											<td>Main Cable Package</td>
+											<td>
+												<div>100</div>
+												<div class="progress c-progress-style">
+													<div class="progress-bar c-progressbar-style"
+														role="progressbar" aria-valuenow="100" aria-valuemin="0"
+														aria-valuemax="100" style="width: 100%">
+														<i class="sr-only">100%</i>
+													</div>
+												</div>
+											</td>
+										</tr>
+										<tr>
+											<td>V203984</td>
+											<td>Yesterday</td>
+											<td>End Of Day</td>
+											<td>Main Cable Package</td>
+											<td>
+												<div>12</div>
+												<div class="progress c-progress-style">
+													<div class="progress-bar c-progressbar-style"
+														role="progressbar" aria-valuenow="12" aria-valuemin="0"
+														aria-valuemax="100" style="width: 12%">
+														<i class="sr-only">12%</i>
+													</div>
+												</div>
+											</td>
+										</tr>
+										<tr>
+											<td>V203984</td>
+											<td>Yesterday</td>
+											<td>End Of Day</td>
+											<td>Main Cable Package</td>
+											<td>
+												<div>50</div>
+												<div class="progress c-progress-style">
+													<div class="progress-bar c-progressbar-style"
+														role="progressbar" aria-valuenow="50" aria-valuemin="0"
+														aria-valuemax="100" style="width: 50%">
+														<i class="sr-only">50%</i>
+													</div>
+												</div>
+											</td>
+										</tr>
+										<tr>
+											<td>V203984</td>
+											<td>Yesterday</td>
+											<td>End Of Day</td>
+											<td>Main Cable Package</td>
+											<td>
+												<div>25</div>
+												<div class="progress c-progress-style">
+													<div class="progress-bar c-progressbar-style"
+														role="progressbar" aria-valuenow="25" aria-valuemin="0"
+														aria-valuemax="100" style="width: 25%">
+														<i class="sr-only">25%</i>
+													</div>
+												</div>
+											</td>
+										</tr>
+										<tr>
+											<td>V203984</td>
+											<td>Yesterday</td>
+											<td>End Of Day</td>
+											<td>Main Cable Package</td>
+											<td>
+												<div>12</div>
+												<div class="progress c-progress-style">
+													<div class="progress-bar c-progressbar-style"
+														role="progressbar" aria-valuenow="12" aria-valuemin="0"
+														aria-valuemax="100" style="width: 12%">
+														<i class="sr-only">12%</i>
+													</div>
+												</div>
+											</td>
+										</tr>
+									</tbody>
+								</table>
+							</div>
+						</div>
+					</div>
+					<div class="panel custom-panel">
+						<div class="c-order-div-style">
+							Bates Motel Season 4 <a data-toggle="collapse"
+								data-parent="#accordion" href="#collapse2"> <span
+								class="caret custom-caret pull-right"></span>
+							</a> <span class="pull-right c-ordercount-style"> 14 </span>
+						</div>
+						<div id="collapse2" class="collapse">
+							<div class="table-responsive">
+								<table class="table table-bordered c-orderstable">
+									<thead>
+										<tr>
+											<th class="col-md-2">ID</th>
+											<th class="col-md-2">Target Date</th>
+											<th class="col-md-2">Target Time</th>
+											<th class="col-md-4">Description</th>
+											<th class="col-md-2">Unpicked</th>
+
+										</tr>
+									</thead>
+									<tbody>
+										<tr>
+											<td>V203984</td>
+											<td>Yesterday</td>
+											<td>End Of Day</td>
+											<td>Main Cable Package</td>
+											<td>
+												<div>100</div>
+												<div class="progress c-progress-style">
+													<div class="progress-bar c-progressbar-style"
+														role="progressbar" aria-valuenow="100" aria-valuemin="0"
+														aria-valuemax="100" style="width: 100%">
+														<i class="sr-only">100%</i>
+													</div>
+												</div>
+											</td>
+										</tr>
+										<tr>
+											<td>V203984</td>
+											<td>Yesterday</td>
+											<td>End Of Day</td>
+											<td>Main Cable Package</td>
+											<td>
+												<div>12</div>
+												<div class="progress c-progress-style">
+													<div class="progress-bar c-progressbar-style"
+														role="progressbar" aria-valuenow="12" aria-valuemin="0"
+														aria-valuemax="100" style="width: 12%">
+														<i class="sr-only">12%</i>
+													</div>
+												</div>
+											</td>
+										</tr>
+										<tr>
+											<td>V203984</td>
+											<td>Yesterday</td>
+											<td>End Of Day</td>
+											<td>Main Cable Package</td>
+											<td>
+												<div>50</div>
+												<div class="progress c-progress-style">
+													<div class="progress-bar c-progressbar-style"
+														role="progressbar" aria-valuenow="50" aria-valuemin="0"
+														aria-valuemax="100" style="width: 50%">
+														<i class="sr-only">50%</i>
+													</div>
+												</div>
+											</td>
+										</tr>
+										<tr>
+											<td>V203984</td>
+											<td>Yesterday</td>
+											<td>End Of Day</td>
+											<td>Main Cable Package</td>
+											<td>
+												<div>25</div>
+												<div class="progress c-progress-style">
+													<div class="progress-bar c-progressbar-style"
+														role="progressbar" aria-valuenow="25" aria-valuemin="0"
+														aria-valuemax="100" style="width: 25%">
+														<i class="sr-only">25%</i>
+													</div>
+												</div>
+											</td>
+										</tr>
+										<tr>
+											<td>V203984</td>
+											<td>Yesterday</td>
+											<td>End Of Day</td>
+											<td>Main Cable Package</td>
+											<td>
+												<div>12</div>
+												<div class="progress c-progress-style">
+													<div class="progress-bar c-progressbar-style"
+														role="progressbar" aria-valuenow="12" aria-valuemin="0"
+														aria-valuemax="100" style="width: 12%">
+														<i class="sr-only">12%</i>
+													</div>
+												</div>
+											</td>
+										</tr>
+									</tbody>
+								</table>
+							</div>
+						</div>
+
+					</div>
+					<div class="panel custom-panel">
+						<div class="c-order-div-style">
+							Birth of the Dragon <a data-toggle="collapse"
+								data-parent="#accordion" href="#collapse3"> <span
+								class="caret custom-caret pull-right"></span>
+							</a> <span class="pull-right c-ordercount-style"> 4 </span>
+						</div>
+						<div id="collapse3" class="collapse">
+							<div class="table-responsive">
+								<table class="table table-bordered c-orderstable">
+									<thead>
+										<tr>
+											<th class="col-md-2">ID</th>
+											<th class="col-md-2">Target Date</th>
+											<th class="col-md-2">Target Time</th>
+											<th class="col-md-4">Description</th>
+											<th class="col-md-2">Unpicked</th>
+
+										</tr>
+									</thead>
+									<tbody>
+										<tr>
+											<td>V203984</td>
+											<td>Yesterday</td>
+											<td>End Of Day</td>
+											<td>Main Cable Package</td>
+											<td>
+												<div>100</div>
+												<div class="progress c-progress-style">
+													<div class="progress-bar c-progressbar-style"
+														role="progressbar" aria-valuenow="100" aria-valuemin="0"
+														aria-valuemax="100" style="width: 100%">
+														<i class="sr-only">100%</i>
+													</div>
+												</div>
+											</td>
+										</tr>
+										<tr>
+											<td>V203984</td>
+											<td>Yesterday</td>
+											<td>End Of Day</td>
+											<td>Main Cable Package</td>
+											<td>
+												<div>12</div>
+												<div class="progress c-progress-style">
+													<div class="progress-bar c-progressbar-style"
+														role="progressbar" aria-valuenow="12" aria-valuemin="0"
+														aria-valuemax="100" style="width: 12%">
+														<i class="sr-only">12%</i>
+													</div>
+												</div>
+											</td>
+										</tr>
+										<tr>
+											<td>V203984</td>
+											<td>Yesterday</td>
+											<td>End Of Day</td>
+											<td>Main Cable Package</td>
+											<td>
+												<div>50</div>
+												<div class="progress c-progress-style">
+													<div class="progress-bar c-progressbar-style"
+														role="progressbar" aria-valuenow="50" aria-valuemin="0"
+														aria-valuemax="100" style="width: 50%">
+														<i class="sr-only">50%</i>
+													</div>
+												</div>
+											</td>
+										</tr>
+										<tr>
+											<td>V203984</td>
+											<td>Yesterday</td>
+											<td>End Of Day</td>
+											<td>Main Cable Package</td>
+											<td>
+												<div>25</div>
+												<div class="progress c-progress-style">
+													<div class="progress-bar c-progressbar-style"
+														role="progressbar" aria-valuenow="25" aria-valuemin="0"
+														aria-valuemax="100" style="width: 25%">
+														<i class="sr-only">25%</i>
+													</div>
+												</div>
+											</td>
+										</tr>
+										<tr>
+											<td>V203984</td>
+											<td>Yesterday</td>
+											<td>End Of Day</td>
+											<td>Main Cable Package</td>
+											<td>
+												<div>12</div>
+												<div class="progress c-progress-style">
+													<div class="progress-bar c-progressbar-style"
+														role="progressbar" aria-valuenow="12" aria-valuemin="0"
+														aria-valuemax="100" style="width: 12%">
+														<i class="sr-only">12%</i>
+													</div>
+												</div>
+											</td>
+										</tr>
+									</tbody>
+								</table>
+							</div>
+						</div>
+
+					</div>
+					<div class="panel custom-panel">
+						<div class="c-order-div-style">
+							Supernatural XI <a data-toggle="collapse" data-parent="#accordion"
+								href="#collapse4"> <span class="caret custom-caret pull-right"></span>
+							</a> <span class="pull-right c-ordercount-style"> 19 </span>
+						</div>
+						<div id="collapse4" class="collapse">
+							<div class="table-responsive">
+								<table class="table table-bordered c-orderstable">
+									<thead>
+										<tr>
+											<th class="col-md-2">ID</th>
+											<th class="col-md-2">Target Date</th>
+											<th class="col-md-2">Target Time</th>
+											<th class="col-md-4">Description</th>
+											<th class="col-md-2">Unpicked</th>
+
+										</tr>
+									</thead>
+									<tbody>
+										<tr>
+											<td>V203984</td>
+											<td>Yesterday</td>
+											<td>End Of Day</td>
+											<td>Main Cable Package</td>
+											<td>
+												<div>100</div>
+												<div class="progress c-progress-style">
+													<div class="progress-bar c-progressbar-style"
+														role="progressbar" aria-valuenow="100" aria-valuemin="0"
+														aria-valuemax="100" style="width: 100%">
+														<i class="sr-only">100%</i>
+													</div>
+												</div>
+											</td>
+										</tr>
+										<tr>
+											<td>V203984</td>
+											<td>Yesterday</td>
+											<td>End Of Day</td>
+											<td>Main Cable Package</td>
+											<td>
+												<div>12</div>
+												<div class="progress c-progress-style">
+													<div class="progress-bar c-progressbar-style"
+														role="progressbar" aria-valuenow="12" aria-valuemin="0"
+														aria-valuemax="100" style="width: 12%">
+														<i class="sr-only">12%</i>
+													</div>
+												</div>
+											</td>
+										</tr>
+										<tr>
+											<td>V203984</td>
+											<td>Yesterday</td>
+											<td>End Of Day</td>
+											<td>Main Cable Package</td>
+											<td>
+												<div>50</div>
+												<div class="progress c-progress-style">
+													<div class="progress-bar c-progressbar-style"
+														role="progressbar" aria-valuenow="50" aria-valuemin="0"
+														aria-valuemax="100" style="width: 50%">
+														<i class="sr-only">50%</i>
+													</div>
+												</div>
+											</td>
+										</tr>
+										<tr>
+											<td>V203984</td>
+											<td>Yesterday</td>
+											<td>End Of Day</td>
+											<td>Main Cable Package</td>
+											<td>
+												<div>25</div>
+												<div class="progress c-progress-style">
+													<div class="progress-bar c-progressbar-style"
+														role="progressbar" aria-valuenow="25" aria-valuemin="0"
+														aria-valuemax="100" style="width: 25%">
+														<i class="sr-only">25%</i>
+													</div>
+												</div>
+											</td>
+										</tr>
+										<tr>
+											<td>V203984</td>
+											<td>Yesterday</td>
+											<td>End Of Day</td>
+											<td>Main Cable Package</td>
+											<td>
+												<div>12</div>
+												<div class="progress c-progress-style">
+													<div class="progress-bar c-progressbar-style"
+														role="progressbar" aria-valuenow="12" aria-valuemin="0"
+														aria-valuemax="100" style="width: 12%">
+														<i class="sr-only">12%</i>
+													</div>
+												</div>
+											</td>
+										</tr>
+									</tbody>
+								</table>
+							</div>
+						</div>
+
+					</div>
+					<div class="panel custom-panel">
+						<div class="c-order-div-style">
+							Hidden Fortress <a data-toggle="collapse" data-parent="#accordion"
+								href="#collapse5"> <span class="caret custom-caret pull-right"></span>
+							</a> <span class="pull-right c-ordercount-style"> 8 </span>
+						</div>
+						<div id="collapse5" class="collapse">
+							<div class="table-responsive">
+								<table class="table table-bordered c-orderstable">
+									<thead>
+										<tr>
+											<th class="col-md-2">ID</th>
+											<th class="col-md-2">Target Date</th>
+											<th class="col-md-2">Target Time</th>
+											<th class="col-md-4">Description</th>
+											<th class="col-md-2">Unpicked</th>
+
+										</tr>
+									</thead>
+									<tbody>
+										<tr>
+											<td>V203984</td>
+											<td>Yesterday</td>
+											<td>End Of Day</td>
+											<td>Main Cable Package</td>
+											<td>
+												<div>100</div>
+												<div class="progress c-progress-style">
+													<div class="progress-bar c-progressbar-style"
+														role="progressbar" aria-valuenow="100" aria-valuemin="0"
+														aria-valuemax="100" style="width: 100%">
+														<i class="sr-only">100%</i>
+													</div>
+												</div>
+											</td>
+										</tr>
+										<tr>
+											<td>V203984</td>
+											<td>Yesterday</td>
+											<td>End Of Day</td>
+											<td>Main Cable Package</td>
+											<td>
+												<div>12</div>
+												<div class="progress c-progress-style">
+													<div class="progress-bar c-progressbar-style"
+														role="progressbar" aria-valuenow="12" aria-valuemin="0"
+														aria-valuemax="100" style="width: 12%">
+														<i class="sr-only">12%</i>
+													</div>
+												</div>
+											</td>
+										</tr>
+										<tr>
+											<td>V203984</td>
+											<td>Yesterday</td>
+											<td>End Of Day</td>
+											<td>Main Cable Package</td>
+											<td>
+												<div>50</div>
+												<div class="progress c-progress-style">
+													<div class="progress-bar c-progressbar-style"
+														role="progressbar" aria-valuenow="50" aria-valuemin="0"
+														aria-valuemax="100" style="width: 50%">
+														<i class="sr-only">50%</i>
+													</div>
+												</div>
+											</td>
+										</tr>
+										<tr>
+											<td>V203984</td>
+											<td>Yesterday</td>
+											<td>End Of Day</td>
+											<td>Main Cable Package</td>
+											<td>
+												<div>25</div>
+												<div class="progress c-progress-style">
+													<div class="progress-bar c-progressbar-style"
+														role="progressbar" aria-valuenow="25" aria-valuemin="0"
+														aria-valuemax="100" style="width: 25%">
+														<i class="sr-only">25%</i>
+													</div>
+												</div>
+											</td>
+										</tr>
+										<tr>
+											<td>V203984</td>
+											<td>Yesterday</td>
+											<td>End Of Day</td>
+											<td>Main Cable Package</td>
+											<td>
+												<div>12</div>
+												<div class="progress c-progress-style">
+													<div class="progress-bar c-progressbar-style"
+														role="progressbar" aria-valuenow="12" aria-valuemin="0"
+														aria-valuemax="100" style="width: 12%">
+														<i class="sr-only">12%</i>
+													</div>
+												</div>
+											</td>
+										</tr>
+									</tbody>
+								</table>
+							</div>
+						</div>
+
+					</div>
+					<div class="panel custom-panel">
+						<div class="c-order-div-style">
+							Supernatural XI <a data-toggle="collapse" data-parent="#accordion"
+								href="#collapse6"> <span class="caret custom-caret pull-right"></span>
+							</a> <span class="pull-right c-ordercount-style"> 23 </span>
+						</div>
+						<div id="collapse6" class="collapse">
+							<div class="table-responsive">
+								<table class="table table-bordered c-orderstable">
+									<thead>
+										<tr>
+											<th class="col-md-2">ID</th>
+											<th class="col-md-2">Target Date</th>
+											<th class="col-md-2">Target Time</th>
+											<th class="col-md-4">Description</th>
+											<th class="col-md-2">Unpicked</th>
+
+										</tr>
+									</thead>
+									<tbody>
+										<tr>
+											<td>V203984</td>
+											<td>Yesterday</td>
+											<td>End Of Day</td>
+											<td>Main Cable Package</td>
+											<td>
+												<div>100</div>
+												<div class="progress c-progress-style">
+													<div class="progress-bar c-progressbar-style"
+														role="progressbar" aria-valuenow="100" aria-valuemin="0"
+														aria-valuemax="100" style="width: 100%">
+														<i class="sr-only">100%</i>
+													</div>
+												</div>
+											</td>
+										</tr>
+										<tr>
+											<td>V203984</td>
+											<td>Yesterday</td>
+											<td>End Of Day</td>
+											<td>Main Cable Package</td>
+											<td>
+												<div>12</div>
+												<div class="progress c-progress-style">
+													<div class="progress-bar c-progressbar-style"
+														role="progressbar" aria-valuenow="12" aria-valuemin="0"
+														aria-valuemax="100" style="width: 12%">
+														<i class="sr-only">12%</i>
+													</div>
+												</div>
+											</td>
+										</tr>
+										<tr>
+											<td>V203984</td>
+											<td>Yesterday</td>
+											<td>End Of Day</td>
+											<td>Main Cable Package</td>
+											<td>
+												<div>50</div>
+												<div class="progress c-progress-style">
+													<div class="progress-bar c-progressbar-style"
+														role="progressbar" aria-valuenow="50" aria-valuemin="0"
+														aria-valuemax="100" style="width: 50%">
+														<i class="sr-only">50%</i>
+													</div>
+												</div>
+											</td>
+										</tr>
+										<tr>
+											<td>V203984</td>
+											<td>Yesterday</td>
+											<td>End Of Day</td>
+											<td>Main Cable Package</td>
+											<td>
+												<div>25</div>
+												<div class="progress c-progress-style">
+													<div class="progress-bar c-progressbar-style"
+														role="progressbar" aria-valuenow="25" aria-valuemin="0"
+														aria-valuemax="100" style="width: 25%">
+														<i class="sr-only">25%</i>
+													</div>
+												</div>
+											</td>
+										</tr>
+										<tr>
+											<td>V203984</td>
+											<td>Yesterday</td>
+											<td>End Of Day</td>
+											<td>Main Cable Package</td>
+											<td>
+												<div>12</div>
+												<div class="progress c-progress-style">
+													<div class="progress-bar c-progressbar-style"
+														role="progressbar" aria-valuenow="12" aria-valuemin="0"
+														aria-valuemax="100" style="width: 12%">
+														<i class="sr-only">12%</i>
+													</div>
+												</div>
+											</td>
+										</tr>
+									</tbody>
+								</table>
+							</div>
+						</div>
+
+					</div>
+					<div class="panel custom-panel">
+						<div class="c-order-div-style">
+							The 100 Season III <a data-toggle="collapse"
+								data-parent="#accordion" href="#collapse7"> <span
+								class="caret custom-caret pull-right"></span>
+							</a> <span class="pull-right c-ordercount-style"> 2 </span>
+						</div>
+						<div id="collapse7" class="collapse">
+							<div class="table-responsive">
+								<table class="table table-bordered c-orderstable">
+									<thead>
+										<tr>
+											<th class="col-md-2">ID</th>
+											<th class="col-md-2">Target Date</th>
+											<th class="col-md-2">Target Time</th>
+											<th class="col-md-4">Description</th>
+											<th class="col-md-2">Unpicked</th>
+
+										</tr>
+									</thead>
+									<tbody>
+										<tr>
+											<td>V203984</td>
+											<td>Yesterday</td>
+											<td>End Of Day</td>
+											<td>Main Cable Package</td>
+											<td>
+												<div>100</div>
+												<div class="progress c-progress-style">
+													<div class="progress-bar c-progressbar-style"
+														role="progressbar" aria-valuenow="100" aria-valuemin="0"
+														aria-valuemax="100" style="width: 100%">
+														<i class="sr-only">100%</i>
+													</div>
+												</div>
+											</td>
+										</tr>
+										<tr>
+											<td>V203984</td>
+											<td>Yesterday</td>
+											<td>End Of Day</td>
+											<td>Main Cable Package</td>
+											<td>
+												<div>12</div>
+												<div class="progress c-progress-style">
+													<div class="progress-bar c-progressbar-style"
+														role="progressbar" aria-valuenow="12" aria-valuemin="0"
+														aria-valuemax="100" style="width: 12%">
+														<i class="sr-only">12%</i>
+													</div>
+												</div>
+											</td>
+										</tr>
+										<tr>
+											<td>V203984</td>
+											<td>Yesterday</td>
+											<td>End Of Day</td>
+											<td>Main Cable Package</td>
+											<td>
+												<div>50</div>
+												<div class="progress c-progress-style">
+													<div class="progress-bar c-progressbar-style"
+														role="progressbar" aria-valuenow="50" aria-valuemin="0"
+														aria-valuemax="100" style="width: 50%">
+														<i class="sr-only">50%</i>
+													</div>
+												</div>
+											</td>
+										</tr>
+										<tr>
+											<td>V203984</td>
+											<td>Yesterday</td>
+											<td>End Of Day</td>
+											<td>Main Cable Package</td>
+											<td>
+												<div>25</div>
+												<div class="progress c-progress-style">
+													<div class="progress-bar c-progressbar-style"
+														role="progressbar" aria-valuenow="25" aria-valuemin="0"
+														aria-valuemax="100" style="width: 25%">
+														<i class="sr-only">25%</i>
+													</div>
+												</div>
+											</td>
+										</tr>
+										<tr>
+											<td>V203984</td>
+											<td>Yesterday</td>
+											<td>End Of Day</td>
+											<td>Main Cable Package</td>
+											<td>
+												<div>12</div>
+												<div class="progress c-progress-style">
+													<div class="progress-bar c-progressbar-style"
+														role="progressbar" aria-valuenow="12" aria-valuemin="0"
+														aria-valuemax="100" style="width: 12%">
+														<i class="sr-only">12%</i>
+													</div>
+												</div>
+											</td>
+										</tr>
+									</tbody>
+								</table>
+							</div>
+						</div>
+
+					</div>
+					<div class="panel custom-panel">
+						<div class="c-order-div-style">
+							Hidden Fortress <a data-toggle="collapse" data-parent="#accordion"
+								href="#collapse1"> <span class="caret custom-caret pull-right"></span>
+							</a> <span class="pull-right c-ordercount-style"> 8 </span>
+						</div>
+						<div id="collapse1" class="collapse">
+							<div class="table-responsive">
+								<table class="table table-bordered c-orderstable">
+									<thead>
+										<tr>
+											<th class="col-md-2">ID</th>
+											<th class="col-md-2">Target Date</th>
+											<th class="col-md-2">Target Time</th>
+											<th class="col-md-4">Description</th>
+											<th class="col-md-2">Unpicked</th>
+
+										</tr>
+									</thead>
+									<tbody>
+										<tr>
+											<td>V203984</td>
+											<td>Yesterday</td>
+											<td>End Of Day</td>
+											<td>Main Cable Package</td>
+											<td>
+												<div>100</div>
+												<div class="progress c-progress-style">
+													<div class="progress-bar c-progressbar-style"
+														role="progressbar" aria-valuenow="100" aria-valuemin="0"
+														aria-valuemax="100" style="width: 100%">
+														<i class="sr-only">100%</i>
+													</div>
+												</div>
+											</td>
+										</tr>
+										<tr>
+											<td>V203984</td>
+											<td>Yesterday</td>
+											<td>End Of Day</td>
+											<td>Main Cable Package</td>
+											<td>
+												<div>12</div>
+												<div class="progress c-progress-style">
+													<div class="progress-bar c-progressbar-style"
+														role="progressbar" aria-valuenow="12" aria-valuemin="0"
+														aria-valuemax="100" style="width: 12%">
+														<i class="sr-only">12%</i>
+													</div>
+												</div>
+											</td>
+										</tr>
+										<tr>
+											<td>V203984</td>
+											<td>Yesterday</td>
+											<td>End Of Day</td>
+											<td>Main Cable Package</td>
+											<td>
+												<div>50</div>
+												<div class="progress c-progress-style">
+													<div class="progress-bar c-progressbar-style"
+														role="progressbar" aria-valuenow="50" aria-valuemin="0"
+														aria-valuemax="100" style="width: 50%">
+														<i class="sr-only">50%</i>
+													</div>
+												</div>
+											</td>
+										</tr>
+										<tr>
+											<td>V203984</td>
+											<td>Yesterday</td>
+											<td>End Of Day</td>
+											<td>Main Cable Package</td>
+											<td>
+												<div>25</div>
+												<div class="progress c-progress-style">
+													<div class="progress-bar c-progressbar-style"
+														role="progressbar" aria-valuenow="25" aria-valuemin="0"
+														aria-valuemax="100" style="width: 25%">
+														<i class="sr-only">25%</i>
+													</div>
+												</div>
+											</td>
+										</tr>
+										<tr>
+											<td>V203984</td>
+											<td>Yesterday</td>
+											<td>End Of Day</td>
+											<td>Main Cable Package</td>
+											<td>
+												<div>12</div>
+												<div class="progress c-progress-style">
+													<div class="progress-bar c-progressbar-style"
+														role="progressbar" aria-valuenow="12" aria-valuemin="0"
+														aria-valuemax="100" style="width: 12%">
+														<i class="sr-only">12%</i>
+													</div>
+												</div>
+											</td>
+										</tr>
+									</tbody>
+								</table>
+							</div>
+						</div>
+
+					</div>
+					<div class="panel custom-panel">
+						<div class="c-order-div-style">
+							Hidden Fortress <a data-toggle="collapse" data-parent="#accordion"
+								href="#collapse1"> <span class="caret custom-caret pull-right"></span>
+							</a> <span class="pull-right c-ordercount-style"> 8 </span>
+						</div>
+						<div id="collapse1" class="collapse">
+							<div class="table-responsive">
+								<table class="table table-bordered c-orderstable">
+									<thead>
+										<tr>
+											<th class="col-md-2">ID</th>
+											<th class="col-md-2">Target Date</th>
+											<th class="col-md-2">Target Time</th>
+											<th class="col-md-4">Description</th>
+											<th class="col-md-2">Unpicked</th>
+
+										</tr>
+									</thead>
+									<tbody>
+										<tr>
+											<td>V203984</td>
+											<td>Yesterday</td>
+											<td>End Of Day</td>
+											<td>Main Cable Package</td>
+											<td>
+												<div>100</div>
+												<div class="progress c-progress-style">
+													<div class="progress-bar c-progressbar-style"
+														role="progressbar" aria-valuenow="100" aria-valuemin="0"
+														aria-valuemax="100" style="width: 100%">
+														<i class="sr-only">100%</i>
+													</div>
+												</div>
+											</td>
+										</tr>
+										<tr>
+											<td>V203984</td>
+											<td>Yesterday</td>
+											<td>End Of Day</td>
+											<td>Main Cable Package</td>
+											<td>
+												<div>12</div>
+												<div class="progress c-progress-style">
+													<div class="progress-bar c-progressbar-style"
+														role="progressbar" aria-valuenow="12" aria-valuemin="0"
+														aria-valuemax="100" style="width: 12%">
+														<i class="sr-only">12%</i>
+													</div>
+												</div>
+											</td>
+										</tr>
+										<tr>
+											<td>V203984</td>
+											<td>Yesterday</td>
+											<td>End Of Day</td>
+											<td>Main Cable Package</td>
+											<td>
+												<div>50</div>
+												<div class="progress c-progress-style">
+													<div class="progress-bar c-progressbar-style"
+														role="progressbar" aria-valuenow="50" aria-valuemin="0"
+														aria-valuemax="100" style="width: 50%">
+														<i class="sr-only">50%</i>
+													</div>
+												</div>
+											</td>
+										</tr>
+										<tr>
+											<td>V203984</td>
+											<td>Yesterday</td>
+											<td>End Of Day</td>
+											<td>Main Cable Package</td>
+											<td>
+												<div>25</div>
+												<div class="progress c-progress-style">
+													<div class="progress-bar c-progressbar-style"
+														role="progressbar" aria-valuenow="25" aria-valuemin="0"
+														aria-valuemax="100" style="width: 25%">
+														<i class="sr-only">25%</i>
+													</div>
+												</div>
+											</td>
+										</tr>
+										<tr>
+											<td>V203984</td>
+											<td>Yesterday</td>
+											<td>End Of Day</td>
+											<td>Main Cable Package</td>
+											<td>
+												<div>12</div>
+												<div class="progress c-progress-style">
+													<div class="progress-bar c-progressbar-style"
+														role="progressbar" aria-valuenow="12" aria-valuemin="0"
+														aria-valuemax="100" style="width: 12%">
+														<i class="sr-only">12%</i>
+													</div>
+												</div>
+											</td>
+										</tr>
+									</tbody>
+								</table>
+							</div>
+						</div>
+				</div>
+			</div>
+		</div>			 			
+</body>
+
+</html>

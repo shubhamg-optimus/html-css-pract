@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="index.css">
+  <link rel="stylesheet" href="user_profile.css">
+</head>
+<body style="background-color:#ECF0F1;overflow: auto;">
+<!--navigation-->
+		<nav class="navbar c-navbar-side navbar-fixed-left">
+		   <div class="c-navbar-logo">
+			   <a class="navbar-brand" href="#">
+					<img class="c-nav-item-img" src="desktop_slicing\ps-logo.png"> 
+			   </a>
+		   </div>
+		   <ul class="nav c-navbar-custom">
+			   <li class="c-menu-item">
+					<a href="index.html">
+						<div class="c-nav-content">
+							<img class="c-nav-item-img" src="desktop_slicing\dashboard.png">
+							<span class="c-nav-item-text" >Dashboard</span>
+						</div>									
+					</a>
+			   </li>
+			   <li class="c-menu-item">
+					<a href="orders.html">
+						<div class="c-nav-content">
+							<img class="c-nav-item-img" src="desktop_slicing\orders-icon.png">
+							<span class="c-nav-item-text">Orders</span>
+						</div>
+					</a>
+			   </li>
+			   <li class="c-menu-item">
+					<a href="pick_lists.html">
+						<div class="c-nav-content">
+							<img class="c-nav-item-img" src="desktop_slicing\list-icon.png">
+							<span class="c-nav-item-text">Pick Lists</span>
+						</div>
+					</a>
+			   </li>
+			   <li class="c-menu-item">
+					<a class="c-menu-link" href="#home">
+						<div class="c-nav-content">
+							<img class="c-nav-item-img" src="desktop_slicing\staging-map.png">
+							<span class="c-nav-item-text">Staging Map</span>
+						</div>
+					</a>
+			   </li>
+			</ul>
+			<ul class="nav c-navbar-custom c-nav-bottom">
+				<li class="c-menu-item">
+					<a class="c-menu-link" href="user_profile.html">
+						<div class="c-nav-content">
+							<img class="c-nav-item-img" src="desktop_slicing\user-icon.png">
+							<span class="c-nav-item-text">John Smith</span>
+						</div>
+					</a>
+			   </li>
+			   <li class="c-menu-item c-menu-item-small">
+					<a class="c-menu-link" href="#home">
+						<div class="c-nav-content c-nav-content-small">
+							<span class="c-nav-item-text">Logout</span>
+						</div>
+					</a>
+			   </li>
+			</ul>
+		</nav>		
+		<!--end navigation-->
+		<!-- 1st section-->
+		<div class="wrapper">
+		    <div class="c-top-nav-custom">
+			  <div class="container-fluid">
+			     <div class="row">
+					 <span class="glyphicon glyphicon-home c-margin-left"></span>
+					 <span class="c-margin-left"> / </span>
+					 <span class="c-margin-left"> John Smith </span>
+					 <span class="fa fa-bell-o pull-right c-margin-right c-padding-top"></span>
+					 <span class="glyphicon glyphicon-search pull-right c-margin-right c-padding-top"></span>
+				 </div>
+			  </div>
+		    </div>
+            <div class="container c-user-profile-container">
+			  <div class="c-user-info">
+				<div class="c-userinfo-header">
+					<ul class="c-navigation">
+						<li data-toggle="tab" href="#userprofile">User Profile</li>
+						<li data-toggle="tab" href="#notifications">Notifications</li>
+						<li data-toggle="tab" href="#activity-history">Activity History</li>
+					</ul>
+				</div>
+				<div class="c-user-profile">					
+				</div>
+				<div class="tab-content">
+					<div id="userprofile" class="tab-pane fade in active">
+						<div class="c-user-content">
+							<span class="c-user-head">NAME</span>
+							<span class="c-user-value">John Smith</span>
+						</div>
+						<div class="c-user-content">
+							<span class="c-user-head">EMAIL</span>
+							<span class="c-user-value c-user-value-color">john.smith@psps.com</span>
+						</div>
+						<div class="c-user-content">
+							<span class="c-user-head">SKYPE</span>
+							<span class="c-user-value c-user-value-color">803-906-883</span>
+						</div>
+						<div class="c-user-content">
+							<span class="c-user-head">LOCATION</span>
+							<span class="c-user-value">Toronto</span>
+						</div>
+						<div class="c-user-content">
+							<span class="c-user-head">ROLE</span>
+							<span class="c-user-value">Department Head</span>
+						</div>
+						<div class="c-user-content">
+							<span class="c-user-head">DEPARTMENT</span>
+							<span class="c-user-value">Cables</span>
+						</div>
+					</div>
+					<div id="notifications" class="tab-pane fade">
+						<div class="c-user-content">
+							<span class="c-user-head">SETTINGS</span>				
+						</div>
+						<div class="c-content-block"> 
+							<div class="checkbox">
+								<label><input type="checkbox" value="">Pick List Created / Upadted / Deleted</label>
+							</div>
+							<div class="checkbox">
+								<label><input type="checkbox" value="">Pick List Assigned</label>
+							</div>
+							<div class="checkbox disabled">
+								<label><input type="checkbox" value="" disabled>Count Assigned</label>
+							</div>
+							<div class="checkbox">
+								<label><input type="checkbox" value="">Comments Added</label>
+							</div>
+							<div class="checkbox">
+								<label><input type="checkbox" value="">Inventory Shortage / Conflict</label>
+							</div>
+						</div>	
+					</div>
+					<div id="activity-history" class="tab-pane fade">
+						<div class="c-user-content">
+							<span class="c-user-head">TODAY</span>				
+						</div>
+						<div class="c-content-block">         
+						  <table class="table table-striped c-custom-table">
+							<thead>
+							  <tr>
+								<th>Time</th>
+								<th>Activity</th>
+							 </tr>
+							</thead>
+							<tbody>
+							  <tr>
+								<td>10:23pm</td>
+								<td>Creates Pick List 1023872-#003 from Order 1023458</td>
+							  </tr>
+							  <tr>
+								<td>9:12pm</td>
+								<td>Assign Pick List 1023872-#003 from Order 1023458</td>						
+							  </tr>
+							  <tr>
+								<td>8:23pm</td>
+								<td>Creates Pick List 1023872-#003 from Order 1023458</td>						
+							  </tr>
+							  <tr>
+								<td>8:23pm</td>
+								<td>Assign Pick List 1023872-#003 from Order 1023458</td>						
+							  </tr>
+							  <tr>
+								<td>8:23pm</td>
+								<td>Assign Pick List 1023872-#003 from Order 1023458</td>						
+							  </tr>
+							  <tr>
+								<td>8:23pm</td>
+								<td>Creates Pick List 1023872-#003 from Order 1023458</td>						
+							  </tr>
+							</tbody>
+						  </table>
+						</div>
+						<div class="c-user-content">
+							<span class="c-user-head">YESTERDAY</span>				
+						</div>
+						<div class="c-content-block">         
+						  <table class="table table-striped c-custom-table">
+							<thead>
+							  <tr>
+								<th>Time</th>
+								<th>Activity</th>
+							 </tr>
+							</thead>
+							<tbody>
+							  <tr>
+								<td>10:23pm</td>
+								<td>Creates Pick List 1023872-#003 from Order 1023458</td>
+							  </tr>
+							  <tr>
+								<td>9:12pm</td>
+								<td>Assign Pick List 1023872-#003 from Order 1023458</td>						
+							  </tr>
+							  <tr>
+								<td>8:23pm</td>
+								<td>Creates Pick List 1023872-#003 from Order 1023458</td>						
+							  </tr>
+							  <tr>
+								<td>8:23pm</td>
+								<td>Assign Pick List 1023872-#003 from Order 1023458</td>						
+							  </tr>
+							  <tr>
+								<td>8:23pm</td>
+								<td>Assign Pick List 1023872-#003 from Order 1023458</td>						
+							  </tr>
+							  <tr>
+								<td>8:23pm</td>
+								<td>Creates Pick List 1023872-#003 from Order 1023458</td>						
+							  </tr>
+							</tbody>
+						  </table>
+						</div>	
+					</div>
+				</div>		
+			  </div>
+			</div>			 			
+</body>
+</html>

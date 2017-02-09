@@ -8,6 +8,35 @@
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
   <link rel="stylesheet" href="index.css">
+  <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+  <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+  <script>
+  $( function() {
+    $( ".column" ).sortable({
+      connectWith: ".column",
+      handle: ".portlet-header",
+      cancel: ".portlet-toggle",
+      placeholder: "portlet-placeholder ui-corner-all"
+    });
+ 
+    $( ".portlet" )
+      .addClass( "ui-widget ui-widget-content ui-helper-clearfix ui-corner-all" )
+      .find( ".portlet-header" )
+        .addClass( "ui-widget-header ui-corner-all" )
+    $( ".portlet-toggle" ).on( "click", function() {
+      var icon = $( this );
+      icon.toggleClass( "ui-icon-minusthick ui-icon-plusthick" );
+      icon.closest( ".portlet" ).find( ".portlet-content" ).toggle();
+    });
+  } );
+  </script>
+  <style>
+    .portlet-placeholder {
+		border: 1px dotted black;
+		margin: 0 1em 1em 0;
+		height: 50px;
+    }
+  </style>
 </head>
 <body style="background-color:#ECF0F1;overflow: auto;">
 <!--navigation-->
@@ -143,107 +172,117 @@
 						    </form>
 						</div>
 			     </div>
-				 <div class="c-column-content">
+				 <div class="c-column-content column">
 						<div id="timeline"></div>
-						<div class="c-orderinfo">
-							<div class="row c-orderinfo-header">
+						<div class="c-orderinfo portlet">
+							<div class="row c-orderinfo-header portlet-header">
 							   <span class="pull-left c-small-font-heavy">V174113-001</span>
 							   <span class="pull-right c-small-font-heavy">Cables</span>
 							</div>
-							<div class="c-orderinfo-content">
-							   <h5 class="c-orderinfo-maincontent"> DC: Legends of Tomorrow</h5>
-							   <h6 class="c-orderinfo-subcontent"> MAIN CABLE PACKAGE</h6>
-							</div>
-							<div class="c-orderinfo-footer">
-							    <div class="progress">
-								  	  <div class="progress-bar" role="progressbar" aria-valuenow="70" aria-valuemin="0" aria-valuemax="100" style="width:70%">
-										<span class="sr-only">70% Complete</span>
-									  </div>
-								</div>								
-								<img class="c-nav-item-img" src="desktop_slicing\star.png">
-								<span class="pull-right c-small-font-heavy c-separator-padding">Morning</span>
-								<span class="pull-right c-small-font-heavy c-vertical-separator">October 7</span>
-							</div>		
+							<div class="portlet-content">
+								<div class="c-orderinfo-content">
+								   <h5 class="c-orderinfo-maincontent"> DC: Legends of Tomorrow</h5>
+								   <h6 class="c-orderinfo-subcontent"> MAIN CABLE PACKAGE</h6>
+								</div>
+								<div class="c-orderinfo-footer">
+									<div class="progress">
+										  <div class="progress-bar" role="progressbar" aria-valuenow="70" aria-valuemin="0" aria-valuemax="100" style="width:70%">
+											<span class="sr-only">70% Complete</span>
+										  </div>
+									</div>								
+									<img class="c-nav-item-img" src="desktop_slicing\star.png">
+									<span class="pull-right c-small-font-heavy c-separator-padding">Morning</span>
+									<span class="pull-right c-small-font-heavy c-vertical-separator">October 7</span>
+								</div>
+							</div>							
 						</div>
-						<div class="c-orderinfo">
-							<div class="row c-orderinfo-header">
+						<div class="c-orderinfo portlet">
+							<div class="row c-orderinfo-header portlet-header">
 							   <span class="pull-left c-small-font-heavy">V174113-001</span>
 							   <span class="pull-right c-small-font-heavy">Cables</span>
 							</div>
-							<div class="c-orderinfo-content">
-							   <h5 class="c-orderinfo-maincontent"> DC: Legends of Tomorrow</h5>
-							   <h6 class="c-orderinfo-subcontent"> MAIN CABLE PACKAGE</h6>
-							</div>
-							<div class="c-orderinfo-footer">
-							    <div class="progress">
-								  	  <div class="progress-bar" role="progressbar" aria-valuenow="70" aria-valuemin="0" aria-valuemax="100" style="width:70%">
-										<span class="sr-only">70% Complete</span>
-									  </div>
-								</div>								
-								<img class="c-nav-item-img" src="desktop_slicing\star.png">
-								<span class="pull-right c-small-font-heavy c-separator-padding">Morning</span>
-								<span class="pull-right c-small-font-heavy c-vertical-separator">October 7</span>
-							</div>		
+							<div class="portlet-content">
+								<div class="c-orderinfo-content">
+								   <h5 class="c-orderinfo-maincontent"> DC: Supergirls Tmorrow</h5>
+								   <h6 class="c-orderinfo-subcontent"> MAIN CABLE PACKAGE</h6>
+								</div>
+								<div class="c-orderinfo-footer">
+									<div class="progress">
+										  <div class="progress-bar" role="progressbar" aria-valuenow="70" aria-valuemin="0" aria-valuemax="100" style="width:70%">
+											<span class="sr-only">70% Complete</span>
+										  </div>
+									</div>								
+									<img class="c-nav-item-img" src="desktop_slicing\star.png">
+									<span class="pull-right c-small-font-heavy c-separator-padding">Morning</span>
+									<span class="pull-right c-small-font-heavy c-vertical-separator">October 7</span>
+								</div>	
+							</div>							
 						</div>	
-						<div class="c-orderinfo">
-							<div class="row c-orderinfo-header">
+						<div class="c-orderinfo portlet">
+							<div class="row c-orderinfo-header portlet-header">
 							   <span class="pull-left c-small-font-heavy">V174113-001</span>
 							   <span class="pull-right c-small-font-heavy">Cables</span>
 							</div>
-							<div class="c-orderinfo-content">
-							   <h5 class="c-orderinfo-maincontent"> DC: Legends of Tomorrow</h5>
-							   <h6 class="c-orderinfo-subcontent"> MAIN CABLE PACKAGE</h6>
+							<div class="portlet-content">
+								<div class="c-orderinfo-content">
+								   <h5 class="c-orderinfo-maincontent"> DC: Johny Bravo</h5>
+								   <h6 class="c-orderinfo-subcontent"> MAIN CABLE PACKAGE</h6>
+								</div>
+								<div class="c-orderinfo-footer">
+									<div class="progress">
+										  <div class="progress-bar" role="progressbar" aria-valuenow="70" aria-valuemin="0" aria-valuemax="100" style="width:70%">
+											<span class="sr-only">70% Complete</span>
+										  </div>
+									</div>								
+									<img class="c-nav-item-img" src="desktop_slicing\star.png">
+									<span class="pull-right c-small-font-heavy c-separator-padding">Morning</span>
+									<span class="pull-right c-small-font-heavy c-vertical-separator">October 7</span>
+								</div>	
+							</div>							
+						</div>		
+						<div class="c-orderinfo portlet">
+							<div class="row c-orderinfo-header portlet-header">
+							   <span class="pull-left c-small-font-heavy">V174113-001</span>
+							   <span class="pull-right c-small-font-heavy">Cables</span>
 							</div>
-							<div class="c-orderinfo-footer">
-							    <div class="progress">
-								  	  <div class="progress-bar" role="progressbar" aria-valuenow="70" aria-valuemin="0" aria-valuemax="100" style="width:70%">
-										<span class="sr-only">70% Complete</span>
-									  </div>
-								</div>								
-								<img class="c-nav-item-img" src="desktop_slicing\star.png">
-								<span class="pull-right c-small-font-heavy c-separator-padding">Morning</span>
-								<span class="pull-right c-small-font-heavy c-vertical-separator">October 7</span>
-							</div>		
+							<div class="portlet-content">
+								<div class="c-orderinfo-content">
+								   <h5 class="c-orderinfo-maincontent"> DC: Dexters Laboratory</h5>
+								   <h6 class="c-orderinfo-subcontent"> MAIN CABLE PACKAGE</h6>
+								</div>
+								<div class="c-orderinfo-footer">
+									<div class="progress">
+										  <div class="progress-bar" role="progressbar" aria-valuenow="70" aria-valuemin="0" aria-valuemax="100" style="width:70%">
+											<span class="sr-only">70% Complete</span>
+										  </div>
+									</div>								
+									<img class="c-nav-item-img" src="desktop_slicing\star.png">
+									<span class="pull-right c-small-font-heavy c-separator-padding">Morning</span>
+									<span class="pull-right c-small-font-heavy c-vertical-separator">October 7</span>
+								</div>	
+							</div>							
 						</div>	
-						<div class="c-orderinfo">
-							<div class="row c-orderinfo-header">
+						<div class="c-orderinfo portlet">
+							<div class="row c-orderinfo-header portlet-header">
 							   <span class="pull-left c-small-font-heavy">V174113-001</span>
 							   <span class="pull-right c-small-font-heavy">Cables</span>
 							</div>
-							<div class="c-orderinfo-content">
-							   <h5 class="c-orderinfo-maincontent"> DC: Legends of Tomorrow</h5>
-							   <h6 class="c-orderinfo-subcontent"> MAIN CABLE PACKAGE</h6>
-							</div>
-							<div class="c-orderinfo-footer">
-							    <div class="progress">
-								  	  <div class="progress-bar" role="progressbar" aria-valuenow="70" aria-valuemin="0" aria-valuemax="100" style="width:70%">
-										<span class="sr-only">70% Complete</span>
-									  </div>
-								</div>								
-								<img class="c-nav-item-img" src="desktop_slicing\star.png">
-								<span class="pull-right c-small-font-heavy c-separator-padding">Morning</span>
-								<span class="pull-right c-small-font-heavy c-vertical-separator">October 7</span>
-							</div>		
-						</div>
-						<div class="c-orderinfo">
-							<div class="row c-orderinfo-header">
-							   <span class="pull-left c-small-font-heavy">V174113-001</span>
-							   <span class="pull-right c-small-font-heavy">Cables</span>
-							</div>
-							<div class="c-orderinfo-content">
-							   <h5 class="c-orderinfo-maincontent"> DC: Legends of Tomorrow</h5>
-							   <h6 class="c-orderinfo-subcontent"> MAIN CABLE PACKAGE</h6>
-							</div>
-							<div class="c-orderinfo-footer">
-							    <div class="progress">
-								  	  <div class="progress-bar" role="progressbar" aria-valuenow="70" aria-valuemin="0" aria-valuemax="100" style="width:70%">
-										<span class="sr-only">70% Complete</span>
-									  </div>
-								</div>								
-								<img class="c-nav-item-img" src="desktop_slicing\star.png">
-								<span class="pull-right c-small-font-heavy c-separator-padding">Morning</span>
-								<span class="pull-right c-small-font-heavy c-vertical-separator">October 7</span>
-							</div>		
+							<div class="portlet-content">
+								<div class="c-orderinfo-content">
+								   <h5 class="c-orderinfo-maincontent"> DC: Legends of Tomorrow</h5>
+								   <h6 class="c-orderinfo-subcontent"> MAIN CABLE PACKAGE</h6>
+								</div>
+								<div class="c-orderinfo-footer">
+									<div class="progress">
+										  <div class="progress-bar" role="progressbar" aria-valuenow="70" aria-valuemin="0" aria-valuemax="100" style="width:70%">
+											<span class="sr-only">70% Complete</span>
+										  </div>
+									</div>								
+									<img class="c-nav-item-img" src="desktop_slicing\star.png">
+									<span class="pull-right c-small-font-heavy c-separator-padding">Morning</span>
+									<span class="pull-right c-small-font-heavy c-vertical-separator">October 7</span>
+								</div>	
+							</div>							
 						</div>	
 					</div>
 			</div>

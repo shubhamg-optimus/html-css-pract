@@ -1,0 +1,91 @@
+.c-order-div-style>a {
+	text-decoration: none;
+}
+
+.c-ordercount-style {
+	background-color: #7AB5E4;
+	padding: 2px 12px;
+	border-radius: 2px;
+}
+
+.custom-caret {
+	border-width: 8px;
+	margin-top: .5%;
+	color: white;
+	margin-left: 18px;
+}
+
+.custom-panel {
+	border: none;
+	margin: 1px;
+}
+
+.c-order-div-style {
+	padding: 10px 13px;
+	border-radius: 0px;
+	background-color: #2980B9;
+	color: #F5F8FB;
+}
+
+.c-orderstable {
+	border: 0px solid #BDC3C7;
+	margin-bottom: 0px;
+}
+
+.c-orderstable>thead>tr>th {
+	border: 0px;
+	text-align: left;
+	background-color: #BDC3C7;
+}
+
+.c-orderstable>tbody>tr>td:first-child {
+	border-left: none;
+}
+
+.c-orderstable>tbody>tr>td:last-child {
+	border-right: none;
+}
+
+.c-orderstable>tbody>tr:nth-child(odd) {
+	background-color: #ECF0F1;
+}
+
+.c-progress-style {
+	height: 8px;
+	margin-bottom: 0px;
+	border-radius: 0px;
+	background-color: #BDC3C7;
+}
+
+.c-progressbar-style {
+	height: 8px;
+	background-color: #1ABC9C;
+}
+
+.c-orderstable>tbody>tr>td:last-child {
+	padding: 0px;
+}
+
+.c-orderstable>tbody>tr>td:last-child>div:first-child {
+	padding-bottom: 6px;
+	padding-left: 16px;
+	padding-top: 6px;
+}
+
+.c-search-glypicon {
+	margin-right: 29px;
+}
+.c-control-icon {
+	margin-right: 4px;
+}
+.c-orderdetails-header {
+	padding: 10px;
+}
+.c-orders-container {
+	border: 1px solid #BDC3C7;
+	margin-top: 20px;
+	margin-bottom: 20px;
+	padding-bottom: 20px;
+	background-color:#ffffff;
+    min-height: 600px; 
+}

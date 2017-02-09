@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="index.css">
+  <style>
+    	.c-user-profile-container{
+	   margin-top: 20px;
+	   margin-bottom: 20px;
+	}
+	.c-navigation{
+	   list-style: none;
+	   text-decoration: none;
+	}
+	.c-navigation>li{
+	    display: inline;
+		margin-left: 25px;
+		margin-right: 10px;
+	    border-bottom: 3px solid #BDC3C7;
+        padding: 10px 5px;
+	}
+	.c-user-info{
+	   border: 1px solid #BDC3C7;
+	   min-height: 600px;
+   	   background-color: #ffffff;	
+	}
+	.c-userinfo-header{
+	   margin-top: 12px;
+	   border-bottom: 1px solid #BDC3C7;
+	}
+	.c-user-head,
+	.c-user-value {
+	   display: block;
+	}
+	.c-user-head {
+	    font-size: 10px;
+		color: #BDC3C7;
+		font-weight: 600;
+	}
+	.c-user-content,
+	.c-content-block{
+	    margin-left: 25px;
+		margin-top: 15px;
+		padding-right: 25px;
+	}
+	.c-user-value-color{
+	   color:#3498DB;
+	}
+	.c-custom-table>thead{
+	    background-color : #BDC3C7;
+	}
+	.c-custom-table>tbody>tr>td, 
+	.c-custom-table>tbody>tr>th,
+	.c-custom-table>thead>tr>td,
+	.c-custom-table>thead>tr>th {
+	    border-top: 0px;
+	}
+	.c-custom-table>tbody>tr>td:first-child{
+	   border-right : 1px solid #BDC3C7;
+	} 
+  </style>
+</head>
+<body>
+ <div class="container col-md-4 c-user-profile-container">
+			<div class="c-user-info">
+				<div class="c-userinfo-header">
+					<ul class="c-navigation">
+						<li data-toggle="tab" href="#userprofile">Details</li>
+						<li data-toggle="tab" href="#notifications">Comments(5)</li>
+						<li data-toggle="tab" href="#activity-history">History(12)</li>
+					</ul>
+				</div>
+				<div class="c-user-profile">					
+				</div>
+				<div class="tab-content">
+					<div id="userprofile" class="tab-pane fade in active">
+						<form>
+    						<div class="form-group">
+								<label for="show" class="c-user-head">SHOW</label>
+								<span class="c-user-value">The 100 - Season III</span>
+						    </div>
+							<div class="form-group">
+								<label for="status" class="c-user-head">STATUS</label>
+								<span class="c-user-value">Unpublished</span>
+						    </div>		
+							<div class="form-group">
+								<span class="c-user-head">TARGET DATE</span>
+								<input type="text" id="target-date">
+								<input type="text" id="target-time">
+							</div>
+						</form>
+					</div>	
+					<div id="notifications" class="tab-pane fade">
+						<div class="c-user-content">
+							<span class="c-user-head">SETTINGS</span>				
+						</div>
+						<div class="c-content-block"> 
+							<div class="checkbox">
+								<label><input type="checkbox" value="">Pick List Created / Upadted / Deleted</label>
+							</div>
+							<div class="checkbox">
+								<label><input type="checkbox" value="">Pick List Assigned</label>
+							</div>
+							<div class="checkbox disabled">
+								<label><input type="checkbox" value="" disabled>Count Assigned</label>
+							</div>
+							<div class="checkbox">
+								<label><input type="checkbox" value="">Comments Added</label>
+							</div>
+							<div class="checkbox">
+								<label><input type="checkbox" value="">Inventory Shortage / Conflict</label>
+							</div>
+						</div>	
+					</div>
+					<div id="activity-history" class="tab-pane fade">
+						<div class="c-user-content">
+							<span class="c-user-head">TODAY</span>				
+						</div>
+						<div class="c-content-block">         
+						  <table class="table table-striped c-custom-table">
+							<thead>
+							  <tr>
+								<th>Time</th>
+								<th>Activity</th>
+							 </tr>
+							</thead>
+							<tbody>
+							  <tr>
+								<td>10:23pm</td>
+								<td>Creates Pick List 1023872-#003 from Order 1023458</td>
+							  </tr>
+							  <tr>
+								<td>9:12pm</td>
+								<td>Assign Pick List 1023872-#003 from Order 1023458</td>						
+							  </tr>
+							  <tr>
+								<td>8:23pm</td>
+								<td>Creates Pick List 1023872-#003 from Order 1023458</td>						
+							  </tr>
+							  <tr>
+								<td>8:23pm</td>
+								<td>Assign Pick List 1023872-#003 from Order 1023458</td>						
+							  </tr>
+							  <tr>
+								<td>8:23pm</td>
+								<td>Assign Pick List 1023872-#003 from Order 1023458</td>						
+							  </tr>
+							  <tr>
+								<td>8:23pm</td>
+								<td>Creates Pick List 1023872-#003 from Order 1023458</td>						
+							  </tr>
+							</tbody>
+						  </table>
+						</div>
+						<div class="c-user-content">
+							<span class="c-user-head">YESTERDAY</span>				
+						</div>
+						<div class="c-content-block">         
+						  <table class="table table-striped c-custom-table">
+							<thead>
+							  <tr>
+								<th>Time</th>
+								<th>Activity</th>
+							 </tr>
+							</thead>
+							<tbody>
+							  <tr>
+								<td>10:23pm</td>
+								<td>Creates Pick List 1023872-#003 from Order 1023458</td>
+							  </tr>
+							  <tr>
+								<td>9:12pm</td>
+								<td>Assign Pick List 1023872-#003 from Order 1023458</td>						
+							  </tr>
+							  <tr>
+								<td>8:23pm</td>
+								<td>Creates Pick List 1023872-#003 from Order 1023458</td>						
+							  </tr>
+							  <tr>
+								<td>8:23pm</td>
+								<td>Assign Pick List 1023872-#003 from Order 1023458</td>						
+							  </tr>
+							  <tr>
+								<td>8:23pm</td>
+								<td>Assign Pick List 1023872-#003 from Order 1023458</td>						
+							  </tr>
+							  <tr>
+								<td>8:23pm</td>
+								<td>Creates Pick List 1023872-#003 from Order 1023458</td>						
+							  </tr>
+							</tbody>
+						  </table>
+						</div>	
+					</div>
+				</div>		
+			  </div>		 			
+</body>
+</html>

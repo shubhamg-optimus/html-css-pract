@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Bootstrap Example</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+  <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+  <script>
+ 
+    function allowDrop(ev) {
+		ev.preventDefault();
+	}
+
+	function drag(ev) {
+	    console.log("ev.target.value :: " + ev.target.id.value);
+		ev.dataTransfer.setData("text", ev.target.id.innerHtml);
+	}
+
+	function drop(ev) {
+		ev.preventDefault();
+		var data = ev.dataTransfer.getData("text");
+		console.log("data :: " + document.getElementById(data).value);
+		ev.target.appendChild(document.getElementById(data));
+	}
+  </script>
+</head>
+<body>
+<div class="container">
+  <h2>Drag and drop</h2>
+  <div class="col-md-4" ondrop="drop(event)" ondragover="allowDrop(event)">
+      <ul>  
+		  <table class="table table-striped"> 
+			<thead>
+			  <tr>
+				<th>Item ID</th>
+				<th>Name</th>
+				<th>Quantity</th>
+			  </tr>
+			</thead>
+			<tbody>
+			  <tr>
+				<td>1</td>
+				<td>Doe</td>
+				<td><input type="text" draggable="true" ondragstart="drag(event)" id="drag1" value="8" /></td>
+			  </tr>
+			  <tr>
+				<td>2</td>
+				<td>Moe</td>
+				<td draggable="true" ondragstart="drag(event)" id="drag2">5</td>
+			  </tr>
+			  <tr>
+				<td>3</td>
+				<td>Dooley</td>
+				<td draggable="true" ondragstart="drag(event)" id="drag3">85</td>
+			  </tr>
+			</tbody>
+		  </table>
+	  </ul>
+  </div>
+  <div class="col-md-offset-2 col-md-2">
+	  <table class="table table-striped col-md-4">
+		<thead>
+		  <tr>
+			<th>Pick</th>
+		  </tr>
+		</thead>
+		<tbody>
+		  <tr>
+			<td  id="div2" ondrop="drop(event)" ondragover="allowDrop(event)">0</td>
+		  </tr>
+		  <tr>
+			<td>0</td>
+		  </tr>
+		  <tr>
+			<td>0</td>
+		  </tr>
+		</tbody>
+	  </table>
+  </div>
+  <div class="col-md-2">
+	  <table class="table table-striped col-md-4">
+		<thead>
+		  <tr>
+			<th>Pick</th>
+		  </tr>
+		</thead>
+		<tbody>
+		  <tr>
+			<td>0</td>
+		  </tr>
+		  <tr>
+			<td>0</td>
+		  </tr>
+		  <tr>
+			<td>0</td>
+		  </tr>
+		</tbody>
+	  </table>
+  </div>
+</div>
+
+</body>
+</html>
