@@ -1,0 +1,417 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+	<script	src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+	<style>
+		/*********** left panel with detail table************/
+		.c-table {
+			border: 0px solid #BDC3C7;
+			margin-bottom: 10px;
+		}
+		.c-table>thead>tr>th {
+			border: 0px;
+			text-align: left;
+			background-color: #BDC3C7;
+		}
+		.c-detailtable>tbody>tr>td:first-child {
+			border-left: none;
+		}
+		.c-detailtable>tbody>tr>td:last-child {
+			border-right: none;
+		}
+		.c-table>tbody>tr:nth-child(odd) {
+			background-color: #ECF0F1;
+		}
+		.c-detailtable-header {
+			padding: 10px;
+		}
+		.c-leftdetail-panel{
+			border: 1px solid #BDC3C7;
+			margin: 10px 5px 10px 20px;
+			padding-top: 15px;
+		}		
+		/** right side panel *************/
+		.c-rightdetail-panel {
+			border: 1px solid #BDC3C7;
+			margin: 10px 20px 10px 5px;
+			padding-right: 0px;
+			padding-left: 0px;
+		}		
+		/**** navigation header **********/	
+		.c-tab-navigation{
+		   margin-top: 12px;
+		   border-bottom: 1px solid #BDC3C7;
+		}
+		.c-navigation-content{
+		   list-style: none;
+		   text-decoration: none;
+		   padding-left: 25px;
+		}
+		.c-navigation-content>li{
+			display: inline;
+			border-bottom: 3px solid #BDC3C7;
+			padding: 10px 5px;
+		}
+		.c-tab-content{
+		   padding-left:15px;
+		}	
+		/***** details form css*****/
+		.c-form-group,
+		.c-content-block{
+			padding-left: 10px;
+			margin-top: 15px;
+			padding-right: 25px;
+		}	
+		.c-head-label,
+		.c-value-label {
+		   display: block;
+		}
+		.c-head-label {
+			font-size: 10px;
+			color: #BDC3C7;
+			font-weight: 600; 
+		}	
+		.c-user-value-color{
+		   color:#3498DB;
+		}
+		.c-sm-form-control{
+		   width:45%;
+		   display: inline;
+		}
+		.c-lg-form-control{
+		   width:80%;
+		   display: inline;
+		}
+		.c-form-btn{
+			margin-top: 10px;
+			margin-bottom: 10px;
+			width: 100px;
+		}
+		/**** right time line block ******/
+		 #tab_right_timeline{
+			top: 0;
+			bottom: 0;
+			right: 5%;
+			position: absolute;
+			content: " ";
+			width: 2px;
+			background-color: #BDC3C7;
+			margin-top: 40px;
+			z-index: -1;
+		}
+		.c-right-timeblock{
+		  margin : 7px;
+		  background: #ffffff;
+		  border: solid 1px #BDC3C7;
+		}
+		.c-timeblock-header,
+		.c-timeblock-content
+		{ padding: 15px;
+		  margin-right: 0px;
+		  margin-left: 0px;
+		  border-bottom: solid 1px #BDC3C7;
+		}		
+		/******** other content ***********/	
+		.c-search-glypicon {
+			margin-right: 29px;
+		}
+		.c-control-icon {
+			margin-right: 4px;
+		}
+		.c-font-blue{
+		  color: #2980B9;
+		}
+		.c-font-grey{
+		  color: #C5CACE;
+		}
+		.c-small-font-heavy{
+		  font-weight: 600;
+		}
+		.c-vertical-separator{
+		  border-right: solid 1px #C5CACE;
+		  padding-right:4px;
+		}
+		.c-separator-padding{
+		  margin-left: 4px;
+		}
+		.c-lg-nav-right{
+		  margin-left: 25%;
+		}
+		.c-sm-nav-right{
+		  margin-left: 15%;
+		}
+		.c-active-border{
+		  border-bottom: 3px solid #2980B9 !important;
+		}		
+	</style>
+</head>	
+<body>
+	<div class="container-fluid">
+		<div class="row">
+			<div class="col-md-7 c-leftdetail-panel">
+				<div class="c-detailtable-header">
+					<img src="./desktop_slicing/star.png"> 
+					<img src="./desktop_slicing/control.png" class="pull-right c-control-icon"> 
+					<i class="fa fa-search pull-right c-search-glypicon"></i>
+				</div>
+				<div class="table-responsive">
+					<table class="table table-bordered c-table c-detailtable">
+						<thead>
+							<tr>
+								<th class="col-md-1">I-Code</th>
+								<th class="col-md-3">Description</th>
+								<th class="col-md-1">Ordered</th>
+								<th class="col-md-1">Staged</th>
+								<th class="col-md-1">Out</th>
+								<th class="col-md-1">1st Count</th>
+								<th class="col-md-1">2nd Count</th>
+							</tr>
+						</thead>
+						<tbody>
+							<tr>
+								<td>3552705</td>
+								<td>KINOFLOW IMAGE 85</td>
+								<td>192</td>
+								<td>100</td>
+								<td>0</td>
+								<td>92</td>
+								<td>0</td>
+							</tr>
+							<tr>
+								<td>3552705</td>
+								<td>KINOFLOW IMAGE 85</td>
+								<td>192</td>
+								<td>100</td>
+								<td>0</td>
+								<td>92</td>
+								<td>0</td>
+							</tr>
+							<tr>
+								<td>3552705</td>
+								<td>KINOFLOW IMAGE 85</td>
+								<td>192</td>
+								<td>100</td>
+								<td>0</td>
+								<td>92</td>
+								<td>0</td>
+							</tr>
+							<tr>
+								<td>3552705</td>
+								<td>KINOFLOW IMAGE 85</td>
+								<td>192</td>
+								<td>100</td>
+								<td>0</td>
+								<td>92</td>
+								<td>0</td>
+							</tr>
+							<tr>
+								<td>3552705</td>
+								<td>KINOFLOW IMAGE 85</td>
+								<td>192</td>
+								<td>100</td>
+								<td>0</td>
+								<td>92</td>
+								<td>0</td>
+							</tr>
+                            <tr>
+								<td>3552705</td>
+								<td>KINOFLOW IMAGE 85</td>
+								<td>192</td>
+								<td>100</td>
+								<td>0</td>
+								<td>92</td>
+								<td>0</td>
+							</tr>
+                            <tr>
+								<td>3552705</td>
+								<td>KINOFLOW IMAGE 85</td>
+								<td>192</td>
+								<td>100</td>
+								<td>0</td>
+								<td>92</td>
+								<td>0</td>
+							</tr>
+                            <tr>
+								<td>3552705</td>
+								<td>KINOFLOW IMAGE 85</td>
+								<td>192</td>
+								<td>100</td>
+								<td>0</td>
+								<td>92</td>
+								<td>0</td>
+							</tr>
+                             <tr>
+								<td>3552705</td>
+								<td>KINOFLOW IMAGE 85</td>
+								<td>192</td>
+								<td>100</td>
+								<td>0</td>
+								<td>92</td>
+								<td>0</td>
+							</tr>
+						</tbody>
+					</table>
+				</div>
+			</div>
+
+			<div class="col-md-4 c-rightdetail-panel">
+				<div class="c-tab-navigation">
+					<ul class="c-navigation-content">
+						<li data-toggle="tab" class="c-active-border" href="#details">Details</li>
+						<li data-toggle="tab" class="c-lg-nav-right" href="#notifications">Comments(5)</li>
+						<li data-toggle="tab" class="c-sm-nav-right" href="#history">History(12)</li>
+					</ul>
+				</div>
+				<div class="tab-content c-tab-content">
+					<div id="details" class="tab-pane fade in active">
+						<div class="c-form-group">
+							<span class="c-head-label">NAME</span>
+							<span class="c-value-label">John Smith</span>
+						</div>
+						<div class="c-form-group">
+							<span class="c-head-label">STATUS</span>
+							<span class="c-value-label">Unpublished</span>
+						</div>
+						<div class="c-form-group">
+							<span class="c-head-label">TARGET DATE</span>
+							<span class="c-value-label">
+							    <input type="text" class="form-control c-sm-form-control" id="target_date" value="10/08/2016">
+							    <input type="text" class="form-control c-sm-form-control col-md-offset-1" id="target_time" value="Morning">					
+							</span>
+						</div>
+						<div class="c-form-group">
+							<span class="c-head-label">DELIVERY TYPE</span>
+							<span class="c-value-label">
+							    <select class="form-control" id="delivery_type">
+									<option>Pickup</option>
+									<option>Delivery</option>
+							    </select>				
+							</span>
+						</div>
+						<div class="c-form-group">
+							<span class="c-head-label">GENERAL NOTE</span>
+							<span class="c-value-label">
+							    <textarea class="form-control" rows="5" id="general_note"></textarea>				
+							</span>
+						</div>
+						<div class="c-form-group">
+							<span class="c-head-label">1st COUNT</span>
+							<span class="c-value-label">
+							    <select class="form-control c-lg-form-control" id="first_count">
+									<option>John Smith</option>
+									<option>Steve Jones</option>
+							    </select>				
+							</span>
+						</div>
+						<div class="c-form-group">
+							<span class="c-head-label">2nd COUNT</span>
+							<span class="c-value-label">
+							    <select class="form-control c-lg-form-control" id="second_count">
+									<option>Steve Jones</option>
+									<option>John Smith</option>
+							    </select>				
+							</span>
+						</div>
+						<div class="c-form-group">
+							<span class="c-head-label">STAGING AREA</span>
+							<span class="c-value-label">
+							    <select class="form-control c-lg-form-control" id="staging_area">
+									<option>Square #21</option>
+									<option>Square #22</option>
+							    </select>				
+							</span>
+						</div>
+						<div class="c-form-group">
+							<button type="button" class="btn c-form-btn btn-default">Delete</button>
+							<button type="button" class="btn c-form-btn btn-primary col-md-offset-1">Save</button>
+							<button type="button" class="btn c-form-btn btn-primary col-md-offset-1">Publish</button>
+						</div>						
+					</div>
+					<div id="notifications" class="tab-pane fade">
+					    <div id="tab_right_timeline"></div>
+						<div class="c-right-timeblock">
+							<div class="row c-timeblock-header">
+							   <span class="pull-left c-small-font-heavy c-font-blue">Steve Jones</span>
+							   <span class="pull-right c-small-font-heavy c-font-grey c-separator-padding">3:23 pm</span>
+							   <span class="pull-right c-small-font-heavy c-font-grey c-vertical-separator">Tues Oct 22</span>
+							</div>
+							<div class="c-timeblock-content">
+							   <p> Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat
+							   <p>
+							</div>
+						</div>
+						<div class="c-right-timeblock">
+							<div class="row c-timeblock-header">
+							   <span class="pull-left c-small-font-heavy c-font-blue">Steve Jones</span>
+							   <span class="pull-right c-small-font-heavy c-font-grey c-separator-padding">3:23 pm</span>
+							   <span class="pull-right c-small-font-heavy c-font-grey c-vertical-separator">Tues Oct 22</span>
+							</div>
+							<div class="c-timeblock-content">
+							   <p> Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore 
+							   <p>
+							</div>
+						</div>
+						<div class="c-right-timeblock">
+							<div class="row c-timeblock-header">
+							   <span class="pull-left c-small-font-heavy c-font-blue">Steve Jones</span>
+							   <span class="pull-right c-small-font-heavy c-font-grey c-separator-padding">3:23 pm</span>
+							   <span class="pull-right c-small-font-heavy c-font-grey c-vertical-separator">Tues Oct 22</span>
+							</div>
+							<div class="c-timeblock-content">
+							   <p> Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore 
+							   <p>
+							</div>
+						</div>
+					</div>
+					<div id="history" class="tab-pane fade">
+						<div id="tab_right_timeline"></div>
+						<div class="c-right-timeblock">
+							<div class="row c-timeblock-header">
+							   <span class="pull-left c-small-font-heavy c-font-blue">Steve Jones</span>
+							   <span class="pull-right c-small-font-heavy c-font-grey c-separator-padding">3:23 pm</span>
+							   <span class="pull-right c-small-font-heavy c-font-grey c-vertical-separator">Oct-22</span>
+							</div>
+							<div class="c-timeblock-content">
+							   <p> 
+							      Create Pick List <span class="c-font-blue">#102358-V264578</span> 
+								  from Order <span class="c-font-blue">10235896</span>
+							   <p>
+							</div>
+						</div>
+						<div class="c-right-timeblock">
+							<div class="row c-timeblock-header">
+							   <span class="pull-left c-small-font-heavy c-font-blue">Steve Jones</span>
+							   <span class="pull-right c-small-font-heavy c-font-grey c-separator-padding">3:23 pm</span>
+							   <span class="pull-right c-small-font-heavy c-font-grey c-vertical-separator">Oct-22</span>
+							</div>
+							<div class="c-timeblock-content">
+							    <p> 
+							      Create Pick List <span class="c-font-blue">#102358-V264578</span> 
+								  from Order <span class="c-font-blue">10235896</span>
+							    <p>
+							</div>
+						</div>
+						<div class="c-right-timeblock">
+							<div class="row c-timeblock-header">
+							   <span class="pull-left c-small-font-heavy c-font-blue">Steve Jones</span>
+							   <span class="pull-right c-small-font-heavy c-font-grey c-separator-padding">3:23 pm</span>
+							   <span class="pull-right c-small-font-heavy c-font-grey c-vertical-separator">Oct-22</span>
+							</div>
+							<div class="c-timeblock-content">
+							    <p> 
+							      Create Pick List <span class="c-font-blue">#102358-V264578</span> 
+								  from Order <span class="c-font-blue">10235896</span>
+							    <p>
+							</div>
+						</div>
+					</div>
+				</div>	
+			</div>		
+		</div>
+	</div>
+</body>
+</html>
